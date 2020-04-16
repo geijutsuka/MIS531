@@ -1,12 +1,28 @@
 -- Create first table BRANCHES with  constraints
-CREATE TABLE Branches (
+CREATE TABLE BRANCHES (
    branch_id   INT   NOT NULL UNIQUE,
    branch_type VARCHAR(60) NOT NULL,
-   street VARCHAR(60),
-   city VARCHAR(60),
-   zipcode INT,
+   branch_name VARCHAR(60),
+   branch_street VARCHAR(60),
+   branch_city VARCHAR(60),
+   branch_zipcode INT,
    PRIMARY KEY(branch_id)
 );
+
+-- branch managers go here
+--skipping for now
+
+-- create table for client_sites
+CREATE TABLE CLIENT_SITES (
+   branch_id   INT   NOT NULL UNIQUE,
+   branch_type VARCHAR(60) NOT NULL,
+   branch_name VARCHAR(60),
+   branch_street VARCHAR(60),
+   branch_city VARCHAR(60),
+   branch_zipcode INT,
+   PRIMARY KEY(branch_id)
+);
+
 
 --Regions has to be created next as Main Branches depends on Regions
 CREATE TABLE Regions (

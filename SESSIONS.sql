@@ -1,8 +1,8 @@
 -- Create table SESSIONS with constraints
 CREATE TABLE SESSIONS (
-   session_id char(4) constraint session_pk PRIMARY KEY, 
-   session_start date,
-   session_end date,
-   session_location varchar(60),
-   instructor char(4) constraint session_inst_fk REFERENCES EMPLOYEES
+   sessionID char(7) constraint session_pk PRIMARY KEY, 
+   start_date date,
+   end_date date,
+   location varchar(255),
+   empID char(9) constraint session_fk REFERENCES EMPLOYEES
 );

@@ -1,3 +1,15 @@
+-- Insert data for AREAS
+insert into AREAS (AreaID, State) values ('A990', 'AZ');
+insert into AREAS (AreaID, State) values ('A349', 'CA');
+insert into AREAS (AreaID, State) values ('A798', 'KS');
+insert into AREAS (AreaID, State) values ('A161', 'NY');
+insert into AREAS (AreaID, State) values ('A932', 'CA');
+insert into AREAS (AreaID, State) values ('A275', 'CA');
+insert into AREAS (AreaID, State) values ('A353', 'CA');
+insert into AREAS (AreaID, State) values ('A330', 'WA');
+insert into AREAS (AreaID, State) values ('A625', 'WA');
+insert into AREAS (AreaID, State) values ('A883', 'CA');
+
 -- Insert data for EMPLOYEES
 insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, State, Zip, SSN, Start_date, End_date, BranchID) values ('E75066627', 'Aimbo', 'Z', 'Hanway', 'rhanway0@virginia.edu', '07/23/1932', '9 Paget Trail', 'Columbus', 'GA', 14028, 44973, '07/20/2012', '09/08/2016', 'B993');
 insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, State, Zip, SSN, Start_date, End_date, BranchID) values ('E17036280', 'Eidel', 'I', 'Pattemore', 'spattemore1@reuters.com', '02/05/1940', '03232 Eagan Court', 'Charlotte', 'NC', 24830, 67800, '02/04/2008', '07/09/2016', 'B743');
@@ -67,7 +79,7 @@ insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Speci
 
 commit;
 
-
+select * from  AREAS;
 select * from  EMPLOYEES;
 select * from  CLIENTS;
 select * from  CUSTOMER_REPS;

@@ -103,16 +103,23 @@ insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C0450', 'E30816862');
 insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C7729', 'E75887080');
 
 -- Insert data for INCIDENTS
-insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC665806994', 4, '01/19/2018', '03/20/2017', 'Traum subdr hem w loss of consciousness of 31-59 min, init', 'OR77462531878');
-insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC816611783', 5, '10/03/2018', '09/08/2018', 'Nondisp seg fx shaft of l femr, 7thJ', 'OR44549999667');
-insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC782926555', 6, '11/24/2018', '10/02/2018', 'Other complications associated with artificial fertilization', 'OR21857777606');
-insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC903458374', 1, '02/03/2020', '01/15/2020', 'Poisoning by oth psychotropic drugs, undetermined, subs', 'OR31892267049');
-insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC773603119', 2, '08/12/2018', '02/04/2018', 'Contact with hot water in bath or tub, sequela', 'OR23376751177');
+insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC665806994', 4, '02/10/2020', '02/10/2020', 'Traum subdr hem w loss of consciousness of 31-59 min, init', 'OR77462531878');
+insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC816611783', 5, '03/12/2020', '03/10/2020', 'Nondisp seg fx shaft of l femr, 7thJ', 'OR44549999667');
+insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC782926555', 6, '02/18/2020', '02/17/2020', 'Other complications associated with artificial fertilization', 'OR21857777606');
+insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC903458374', 1, '04/24/2020', '04/25/2020', 'Poisoning by oth psychotropic drugs, undetermined, subs', 'OR31892267049');
+insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC773603119', 2, '01/03/2020', '01/04/2020', 'Contact with hot water in bath or tub, sequela', 'OR23376751177');
 insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC021719877', 3, '05/19/2018', '03/15/2018', 'Sltr-haris Type I physeal fx phalanx of right toe, init', 'OR29070583181');
 insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC907009497', 2, '05/10/2019', '12/09/2018', 'Corrosion of left eye and adnexa, part unsp, subs encntr', 'OR78809410802');
 insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC987310174', 1, '08/25/2019', '08/04/2019', 'Nondisplaced oblique fracture of shaft of right tibia', 'OR07368537866');
 insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC358115731', 1, '01/14/2019', '12/27/2018', 'Chronic periodontitis, localized, unspecified severity', 'OR74183465803');
 insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC757589979', 1, '08/01/2018', '08/01/2018', 'Unsp injury of left innominate or subclavian artery, sequela', 'OR83969622999');
+
+-- Insert data for ORDERS
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR77462531878', '02/10/2020', '19:55', 'shipped', 'War op involving intentl restrict of air/airwy, milt, subs', 2, '02/10/2020', '20:50', 'CS7172');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR44549999667', '03/12/2020', '7:24', 'pending', 'Intentional self-harm by other specified means, sequela', 3, '03/12/2020', '8:09', 'CS7172');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR21857777606', '02/18/2020', '6:32', 'delivered', 'Partial traumatic amputation of right midfoot', 5, '02/18/2020', '7:49', 'CS0783');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR31892267049', '04/24/2020', '17:24', 'pending', 'Pathological fracture, unspecified finger(s), sequela', 5, '04/25/2020', '15:59', 'CS0783');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR23376751177', '01/03/2020', '9:59', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 6, '01/04/2020', '16:40', 'CS7777');
 
 commit;
 
@@ -125,6 +132,7 @@ select * from  CUSTOMER_REP_TEAMS;
 select * from  CAN_SERVICE_AREA;
 select * from  CAN_SERVICE_CLIENT;
 select * from  INCIDENTS;
+select * from  ORDERS;
 
 --------------------Testing--------------------
 set serveroutput on;

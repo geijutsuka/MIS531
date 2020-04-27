@@ -38,7 +38,7 @@ insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, E
 
 -- Insert data for CLIENTS
 insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Primary_contact_fname, Primary_contact_minitial, Primary_contact_lname, Primary_contact_phone, Primary_contact_email) values ('C6555', 'Yakijo', '222 Bluejay Park', 'Rochester', 'NY', 87964, 0.03, 'Kassey', 'N', 'Trevers', '5854673661', 'ktrevers0@angelfire.com');
-insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Primary_contact_fname, Primary_contact_minitial, Primary_contact_lname, Primary_contact_phone, Primary_contact_email) values ('C9887', 'Jaxspan', '02 Vernon Terrace', 'Orlando', 'FL', 47210, 0.30, 'Delcine', 'V', 'Gorbell', '3211396574', 'dgorbell1@trellian.com');
+insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Primary_contact_fname, Primary_contact_minitial, Primary_contact_lname, Primary_contact_phone, Primary_contact_email) values ('C9887', 'Jaxspan', '02 Vernon Terrace', 'Phoenix', 'AZ', 47210, 0.30, 'Delcine', 'V', 'Gorbell', '3211396574', 'dgorbell1@trellian.com');
 insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Primary_contact_fname, Primary_contact_minitial, Primary_contact_lname, Primary_contact_phone, Primary_contact_email) values ('C6901', 'Pixope', '9 Waxwing Park', 'Mansfield', 'OH', 84709, 0.40, 'Demetre', 'W', 'Tabour', '4194835556', 'dtabour2@alibaba.com');
 insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Primary_contact_fname, Primary_contact_minitial, Primary_contact_lname, Primary_contact_phone, Primary_contact_email) values ('C0450', 'Oyoloo', '671 Novick Avenue', 'Columbia', 'SC', 12152, 0.26, 'Godart', 'N', 'Donnellan', '8031279794', 'gdonnellan3@psu.edu');
 insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Primary_contact_fname, Primary_contact_minitial, Primary_contact_lname, Primary_contact_phone, Primary_contact_email) values ('C7729', 'Gigaclub', '3 5th Drive', 'Saint Paul', 'MN', 52576, 0.11, 'Zandra', 'G', 'Halfacre', '6124664059', 'zhalfacre4@360.cn');
@@ -49,6 +49,18 @@ insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Prima
 insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Primary_contact_fname, Primary_contact_minitial, Primary_contact_lname, Primary_contact_phone, Primary_contact_email) values ('C7828', 'Buzzshare', '5042 Elgar Circle', 'Springfield', 'IL', 17963, 0.05, 'Edvard', 'O', 'Mc Pake', '2171047851', 'emcpake9@exblog.jp');
 insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Primary_contact_fname, Primary_contact_minitial, Primary_contact_lname, Primary_contact_phone, Primary_contact_email) values ('C1546', 'Wikido', '94 Bonner Point', 'Louisville', 'KY', 95518, 0.20, 'Siward', 'R', 'Oman', '5026272111', 'somana@nhs.uk');
 insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Primary_contact_fname, Primary_contact_minitial, Primary_contact_lname, Primary_contact_phone, Primary_contact_email) values ('C6928', 'Kamba', '85 Myrtle Way', 'Sacramento', 'CA', 48937, 0.30, 'Jacobo', 'L', 'Drains', '9165902756', 'jdrainsb@elpais.com');
+
+-- Insert data for CLIENT_SITES
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS7172', 'C9887', 'A990', 6590, '8 Meadow Vale Street', 'Phoenix', 'AZ', 90446);
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS6195', 'C6144', 'A330', 9968, '15984 Quincy Park', 'Lakewood', 'WA', 37447);
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS0783', 'C6555', 'A161', 4275, '338 Di Loreto Avenue', 'Buffalo', 'NY', 70641);
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS4019', 'C6959', 'A798', 4858, '5839 Pond Park', 'Topeka', 'KS', 60662);
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS7777', 'C3105', 'A349', 5560, '386 Colorado Park', 'Whittier', 'CA', 65807);
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS3644', 'C6928', 'A932', 8355, '3598 Hooker Pass', 'Salinas', 'CA', 32800);
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS3340', 'C9887', 'A990', 8300, '660 Vera Point', 'Phoenix', 'AZ', 32829);
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS6157', 'C6928', 'A353', 6380, '0 Manufacturers Trail', 'San Francisco', 'CA', 13803);
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS5734', 'C9887', 'A990', 7945, '0991 Vermont Drive', 'Phoenix', 'AZ', 43254);
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS3556', 'C6928', 'A883', 5705, '903 Quincy Pass', 'Sacramento', 'CA', 23277);
 
 -- Insert data for CUSTOMER_REPS
 insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E75066627', 'senior', 'full', 0.72, 2, '$1024.02', 'B993', 'TM487');
@@ -82,6 +94,7 @@ commit;
 select * from  AREAS;
 select * from  EMPLOYEES;
 select * from  CLIENTS;
+select * from  CLIENT_SITES;
 select * from  CUSTOMER_REPS;
 select * from  CUSTOMER_REP_TEAMS;
 

@@ -88,13 +88,19 @@ insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Speci
 insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM817', 'Wallaby', 'E64168049', '12/13/2019', 'GR33', 'A625');
 insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM686', 'Camel', 'E81391954', '02/24/2018', 'GR36', 'A883');
 
+-- Insert data for CAN_SERVICE_AREA
+insert into CAN_SERVICE_AREA (AreaID, TeamID) values ('A990', 'TM487');
+insert into CAN_SERVICE_AREA (AreaID, TeamID) values ('A349', 'TM886');
+insert into CAN_SERVICE_AREA (AreaID, TeamID) values ('A798', 'TM563');
+insert into CAN_SERVICE_AREA (AreaID, TeamID) values ('A161', 'TM858');
+insert into CAN_SERVICE_AREA (AreaID, TeamID) values ('A932', 'TM736');
+
 -- Insert data for CAN_SERVICE_CLIENT
 insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C6555', 'E75066627');
 insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C9887', 'E17036280');
 insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C6901', 'E77935863');
 insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C0450', 'E30816862');
 insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C7729', 'E75887080');
-
 
 commit;
 
@@ -104,6 +110,7 @@ select * from  CLIENTS;
 select * from  CLIENT_SITES;
 select * from  CUSTOMER_REPS;
 select * from  CUSTOMER_REP_TEAMS;
+select * from  CAN_SERVICE_AREA;
 select * from  CAN_SERVICE_CLIENT;
 
 --------------------Testing--------------------

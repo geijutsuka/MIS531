@@ -140,6 +140,7 @@ select * from  EMPLOYEES;
 select * from  CLIENTS;
 select * from  CLIENT_SITES;
 select * from  CUSTOMER_REPS;
+select * from  CUSTOMER_REP_SPECIALTIES;
 select * from  CUSTOMER_REP_TEAMS;
 select * from  CAN_SERVICE_AREA;
 select * from  CAN_SERVICE_CLIENT;

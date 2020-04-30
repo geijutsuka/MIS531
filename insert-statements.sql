@@ -108,11 +108,11 @@ insert into CAN_SERVICE_AREA (AreaID, TeamID) values ('A161', 'TM858');
 insert into CAN_SERVICE_AREA (AreaID, TeamID) values ('A932', 'TM736');
 
 -- Insert data for CAN_SERVICE_CLIENT
-insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C6555', 'E75066627');
-insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C9887', 'E17036280');
-insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C6901', 'E77935863');
-insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C0450', 'E30816862');
-insert into CAN_SERVICE_AREA (ClientID, EmpID) values ('C7729', 'E75887080');
+insert into CAN_SERVICE_CLIENT (ClientID, EmpID) values ('C6555', 'E75066627');
+insert into CAN_SERVICE_CLIENT (ClientID, EmpID) values ('C9887', 'E17036280');
+insert into CAN_SERVICE_CLIENT (ClientID, EmpID) values ('C6901', 'E77935863');
+insert into CAN_SERVICE_CLIENT (ClientID, EmpID) values ('C0450', 'E30816862');
+insert into CAN_SERVICE_CLIENT (ClientID, EmpID) values ('C7729', 'E75887080');
 
 -- Insert data for INCIDENTS
 insert into INCIDENTS (Incident_ID, Incident_count, Incident_date, Complaint_date, Description, OrderID) values ('INC665806994', 4, '02/10/2020', '02/10/2020', 'Traum subdr hem w loss of consciousness of 31-59 min, init', 'OR77462531878');

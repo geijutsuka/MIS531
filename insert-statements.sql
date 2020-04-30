@@ -76,17 +76,29 @@ insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_ra
 insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E76861181', 'entry', 'trainee', 0.11, 1, '$4324.76', 'B253', 'TM886');
 insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E94766506', 'entry', 'trainee', 0.96, 1, '$4041.30', 'B253', 'TM886');
 
+-- Insert data for CUSTOMER_REP_SPECIALTIES
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR03');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR10');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E77935863', 'GR16');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E61065442', 'GR23');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E61065442', 'GR32');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR40');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E77935863', 'GR12');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E21391042', 'GR33');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E43206250', 'GR20');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E94766506', 'GR39');
+
 -- Insert data for CUSTOMER_REP_TEAMS
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM487', 'Puffin', 'E17036280', '04/17/2018', 'GR01', 'A990');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM886', 'Whale', 'E61065442', '04/14/2020', 'GR03', 'A349');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM563', 'Booby', 'E95305709', '10/17/2018', 'GR13', 'A798');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM858', 'Roller', 'E59911802', '04/14/2020', 'GR27', 'A161');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM736', 'Turtle', 'E09755754', '02/28/2020', 'GR40', 'A932');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM455', 'Kookaburra', 'E25174553', '12/29/2019', 'GR23', 'A275');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM370', 'Boa', 'E65748697', '04/18/2019', 'GR26', 'A353');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM905', 'Bushpig', 'E85965402', '12/26/2019', 'GR06', 'A330');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM817', 'Wallaby', 'E64168049', '12/13/2019', 'GR33', 'A625');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Specialty, Office_area) values ('TM686', 'Camel', 'E81391954', '02/24/2018', 'GR36', 'A883');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM487', 'Puffin', 'E17036280', '04/17/2018', 'A990');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM886', 'Whale', 'E61065442', '04/14/2020', 'A349');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM563', 'Booby', 'E95305709', '10/17/2018', 'A798');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM858', 'Roller', 'E59911802', '04/14/2020', 'A161');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM736', 'Turtle', 'E09755754', '02/28/2020', 'A932');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM455', 'Kookaburra', 'E25174553', '12/29/2019', 'A275');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM370', 'Boa', 'E65748697', '04/18/2019', 'A353');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM905', 'Bushpig', 'E85965402', '12/26/2019', 'A330');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM817', 'Wallaby', 'E64168049', '12/13/2019', 'A625');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM686', 'Camel', 'E81391954', '02/24/2018', 'A883');
 
 -- Insert data for CAN_SERVICE_AREA
 insert into CAN_SERVICE_AREA (AreaID, TeamID) values ('A990', 'TM487');

@@ -8,6 +8,7 @@ drop table CLIENT_SITES;
 drop table COMMENTS;
 drop table COURSES;
 drop table CUSTOMER_REPS;
+drop table CUSTOMER_REP_SPECIALTIES;
 drop table CUSTOMER_REP_TEAMS;
 drop table DISTRIBUTE;
 drop table DISTRIBUTION_DETAILS;
@@ -146,6 +147,7 @@ CREATE TABLE COURSES  (
    FOREIGN KEY (product_group_ID) REFERENCES PRODUCT_GROUPS (product_group_ID)
 );
 
+
 CREATE TABLE CUSTOMER_REPS (
    empID char(9),
    seniority varchar(255),
@@ -164,16 +166,22 @@ CREATE TABLE CUSTOMER_REPS (
 );
 
 
+CREATE TABLE CUSTOMER_REP_SPECIALTIES (
+   empID char(9),
+   specialty char(4),
+   FOREIGN KEY (empID) REFERENCES CUSTOMER_REPS (empID),
+   FOREIGN KEY (specialty) REFERENCES PRODUCT_GROUPS (specialty),
+);
+
+
 CREATE TABLE CUSTOMER_REP_TEAMS (
    teamID char(5), 
    team_name varchar(255), 
    team_leadID char(9) CONSTRAINT cust_rep_team_leadID_nn NOT NULL, 
    form_date date, 
-   office_area char(4),
-   specialty char(4), 
+   office_area char(4), 
    CONSTRAINT customer_rep_teams_pk PRIMARY KEY (teamID),
    FOREIGN KEY (team_leadID) REFERENCES EMPLOYEES (team_leadID),
-   FOREIGN KEY (specialty) REFERENCES PRODUCT_GROUPS (specialty),
    FOREIGN KEY (office_area) REFERENCES AREAS (office_area)
 
 );

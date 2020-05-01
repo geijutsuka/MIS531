@@ -165,6 +165,8 @@ insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demograp
 insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('AZ', 'Arizona', 'low', 39.21, 'lorem ipsum');
 insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('KS', 'Kansas', 'low', 32.54, 'lorem ipsum');
 insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('UT', 'Utah', 'medium', 64.94, 'lorem ipsum');
+insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('WA', 'Washington', 'high', 20.94, 'lorem ipsum');
+insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('CA', 'California', 'medium', 23.40, 'lorem ipsum');
 
 -- Insert data for PRODUCT_GROUPS
 insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR01', 'cosmetic');

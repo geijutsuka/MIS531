@@ -103,7 +103,7 @@ CREATE TABLE CLIENT_SITES (
 );
 
 CREATE TABLE CLIENTS (
-   clientID char(4),
+   clientID char(5),
    name varchar(60),
    street varchar(60),
    city varchar(32),

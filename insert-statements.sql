@@ -63,18 +63,18 @@ insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, Sta
 insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS3556', 'C6928', 'A883', 5705, '903 Quincy Pass', 'Sacramento', 'CA', 23277);
 
 -- Insert data for CUSTOMER_REPS
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E75066627', 'senior', 'full', 0.72, 2, '1024.02', 'B993', 'TM487');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E17036280', 'lead', 'full', 0.23, 3, '1272.77', 'B993', 'TM487');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E77935863', 'senior', 'full', 0.33, 4, '1086.32', 'B347', 'TM179');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E30816862', 'entry', 'trainee', 0.23, 3, '1355.53', 'B583', 'TM256');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E75887080', 'middle', 'full', 0.84, 3, '1166.56', 'B490', 'TM748');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E83282873', 'entry', 'trainee', 0.09, 2, '3180.01', 'B993', 'TM487');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E20850381', 'middle', 'full', 0.21, 3, '247.99', 'B459', 'TM442');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E21391042', 'middle', 'full', 0.62, 2, '2834.64', 'B730', 'TM080');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E61065442', 'lead', 'full', 0.18, 4, '3926.14', 'B253', 'TM886');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E43206250', 'senior', 'full', 0.21, 1, '2767.25', 'B708', 'TM400');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E76861181', 'entry', 'trainee', 0.11, 1, '4324.76', 'B253', 'TM886');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E94766506', 'entry', 'trainee', 0.96, 1, '4041.30', 'B253', 'TM886');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E75066627', 'senior', 'full', 0.72, 2, '1024.02', 'B993', 'TM487');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E17036280', 'lead', 'full', 0.23, 3, '1272.77', 'B993', 'TM487');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E77935863', 'senior', 'full', 0.33, 4, '1086.32', 'B347', 'TM179');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E30816862', 'entry', 'trainee', 0.23, 3, '1355.53', 'B583', 'TM256');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E75887080', 'middle', 'full', 0.84, 3, '1166.56', 'B490', 'TM748');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E83282873', 'entry', 'trainee', 0.09, 2, '3180.01', 'B993', 'TM487');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E20850381', 'middle', 'full', 0.21, 3, '247.99', 'B459', 'TM442');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E21391042', 'middle', 'full', 0.62, 2, '2834.64', 'B730', 'TM080');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E61065442', 'lead', 'full', 0.18, 4, '3926.14', 'B253', 'TM886');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E43206250', 'senior', 'full', 0.21, 1, '2767.25', 'B708', 'TM400');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E76861181', 'entry', 'trainee', 0.11, 1, '4324.76', 'B253', 'TM886');
+insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E94766506', 'entry', 'trainee', 0.96, 1, '4041.30', 'B253', 'TM886');
 
 -- Insert data for CUSTOMER_REP_SPECIALTIES
 insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR03');

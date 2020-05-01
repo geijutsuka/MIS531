@@ -1,137 +1,124 @@
-drop table AREAS;
-drop table AREA_ZIP;
-drop table BRANCHES;
-drop table MAIN_BRANCHES;
-drop table CAN_SERVICE;
-drop table CLIENTS;
-drop table CLIENT_SITES;
-drop table COMMENTS;
-drop table COURSES;
-drop table CUSTOMER_REPS;
-drop table CUSTOMER_REP_SPECIALTIES;
-drop table CUSTOMER_REP_TEAMS;
-drop table DISTRIBUTE;
-drop table DISTRIBUTION_DETAILS;
-drop table EMAIL;
-drop table EMERGENCY_ORDER;
-drop table EMPLOYEES;
-drop table FUNCTIONAL_EMPLOYEES;
-drop table INCIDENTS;
-drop table ITEMS;
-drop table MANAGERS;
-drop table BRAND_MANAGERS;
-drop table PRODUCT_LINE_MANAGERS;
-drop table REGIONAL_MANAGERS;
-drop table MARKET_DEMOGRAPHICS;
-drop table NEW_PRODUCT;
-drop table ORDERS;
-drop table ORDER_DETAILS;
-drop table PRODUCTS;
-drop table PRODUCT_GROUPS;
-drop table PRODUCT_LINES;
-drop table PROMOTE;
-drop table PROMOTIONS;
-drop table REGIONS;
-drop table REPORT;
-drop table REVIEWS;
-drop table REVIEW_DETAILS;
-drop table SALARIED;
-drop table SESSIONS;
-drop table SPECIALIZES;
-drop table STATES;
-drop table TAXES;
-drop table TEMPORARY;
-drop table TRAIN_AT;
-drop table VISIT;
-drop table VISIT_DETAILS;
+
+
+
+drop table AREAS CASCADE CONSTRAINTS;
+drop table AREA_ZIP CASCADE CONSTRAINTS;
+drop table BRANCHES CASCADE CONSTRAINTS;
+drop table MAIN_BRANCHES CASCADE CONSTRAINTS;
+drop table CAN_SERVICE_AREA CASCADE CONSTRAINTS;
+drop table CAN_SERVICE_CLIENT CASCADE CONSTRAINTS;
+drop table CLIENT_SITES CASCADE CONSTRAINTS;
+drop table CLIENTS CASCADE CONSTRAINTS;
+drop table COURSES CASCADE CONSTRAINTS;
+drop table CUSTOMER_REPS CASCADE CONSTRAINTS;
+drop table CUSTOMER_REP_TEAMS CASCADE CONSTRAINTS;
+drop table DISTRIBUTE CASCADE CONSTRAINTS;
+drop table DISTRIBUTION_DETAILS CASCADE CONSTRAINTS ;
+drop table EMERGENCY_ORDER CASCADE CONSTRAINTS;
+drop table EMPLOYEES CASCADE CONSTRAINTS;
+drop table MANAGERS CASCADE CONSTRAINTS ;
+drop table FUNCTIONAL_EMPLOYEES CASCADE CONSTRAINTS;
+drop table BRAND_MANAGERS CASCADE CONSTRAINTS;
+drop table PRODUCT_LINE_MANAGERS CASCADE CONSTRAINTS;
+drop table REGIONAL_MANAGERS CASCADE CONSTRAINTS;
+drop table SALARIED CASCADE CONSTRAINTS;
+drop table TEMPORARY CASCADE CONSTRAINTS;
+drop table INCIDENTS CASCADE CONSTRAINTS;
+drop table ITEMS CASCADE CONSTRAINTS;
+drop table NEW_PRODUCTS CASCADE CONSTRAINTS;
+drop table ORDERS CASCADE CONSTRAINTS;
+drop table ORDER_DETAILS CASCADE CONSTRAINTS;
+drop table PRODUCTS CASCADE CONSTRAINTS;
+drop table PRODUCT_GROUPS CASCADE CONSTRAINTS;
+drop table PRODUCT_LINES CASCADE CONSTRAINTS;
+drop table PROMOTE CASCADE CONSTRAINTS;
+drop table PROMOTIONS CASCADE CONSTRAINTS;
+drop table REGIONS CASCADE CONSTRAINTS;
+drop table REPORT CASCADE CONSTRAINTS;
+drop table REVIEW_DETAILS CASCADE CONSTRAINTS;
+drop table REVIEWS CASCADE CONSTRAINTS;
+drop table SESSIONS CASCADE CONSTRAINTS;
+drop table SPECIALIZES CASCADE CONSTRAINTS;
+drop table STATES CASCADE CONSTRAINTS;
+drop table TAXES CASCADE CONSTRAINTS;
+drop table TRAIN_AT CASCADE CONSTRAINTS;
+drop table VISITS CASCADE CONSTRAINTS;
+drop table VISIT_DETAILS CASCADE CONSTRAINTS;
+
 
 -- Create tables
 
 CREATE TABLE AREAS (
    areaID char(4),
-   state char(2),
-   CONSTRAINT areas_pk PRIMARY KEY (areaID),
-   FOREIGN KEY (state) REFERENCES STATES (state)
-
+   stateID char(2) CONSTRAINT areas_state_nn NOT NULL,
+   CONSTRAINT areas_pk PRIMARY KEY (areaID)
 );
 
 CREATE TABLE AREA_ZIP (
    areaID char(4),
-   zip char(5),
-   CONSTRAINT area_zip_pk PRIMARY KEY (areaID, zip),
-   FOREIGN KEY (areaID) REFERENCES AREAS (areaID)
+   zip number(5),
+   CONSTRAINT area_zip_pk PRIMARY KEY (areaID, zip)
 );
 
 CREATE TABLE BRANCHES (
    branchID char(4),
-   branch_name varchar(255) CONSTRAINT branches_nn NOT NULL,
-   branch_type varchar(255),
-   street varchar(255),
-   city varchar(255),
-   state char(2),
-   zip char(5),
+   branch_name varchar(55) CONSTRAINT branches_nn NOT NULL,
+   branch_type varchar(20),
+   street varchar(60),
+   city varchar(32),
+   stateID char(2),
+   zip number(5),
    main_branch_ID char (4),
-   CONSTRAINT branches_pk PRIMARY KEY (branchID),
-   FOREIGN KEY (main_branch_ID) REFERENCES MAIN_BRANCHES (main_branch_ID)
-
+   CONSTRAINT branches_pk PRIMARY KEY (branchID)
 );
 
 CREATE TABLE MAIN_BRANCHES (
-   main_branch_ID char(5),
+   main_branch_ID char(4),
    regionID char(5),
-   CONSTRAINT main_branches_pk PRIMARY KEY (main_branch_ID, regionID),
-   FOREIGN KEY (main_branch_ID) REFERENCES BRANCHES (branchID),
-   FOREIGN KEY (regionID) REFERENCES REGIONS (regionID)
+   CONSTRAINT main_branches_pk PRIMARY KEY (main_branch_ID, regionID)
 );
 
 
-CREATE TABLE CAN_SERVICE (
+CREATE TABLE CAN_SERVICE_AREA(
    clientID char(4),
    empID char(9),
-   CONSTRAINT can_service_pk PRIMARY KEY (clientID, empID),
-   FOREIGN KEY (clientID) REFERENCES CLIENTS (clientID),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID)
+   CONSTRAINT can_service_area_pk PRIMARY KEY (clientID, empID)
 );
 
-
-CREATE TABLE CLIENTS (
-   clientID char(4),
-   name varchar(255),
-   street varchar(255),
-   city varchar(255),
-   state char(2),
-   zip char(5),
-   primary_contact_name varchar(255),
-   primary_contact_title varchar(255),
-   primary_contact_phone varchar(10),
-   primary_contact_email varchar(255),
-   discount number(1,2),
-   CONSTRAINT clients_pk PRIMARY KEY (clientID)
-
+CREATE TABLE CAN_SERVICE_CLIENT(
+   areaID char(4),
+   teamID char(5),
+   CONSTRAINT can_service_client_pk PRIMARY KEY (areaID, teamID)
 );
-
 
 CREATE TABLE CLIENT_SITES (
    siteID char(6),
-   size number(4),
-   street varchar(255),
-   city varchar(255),
-   state char(2),
-   zip char(5),
    clientID char(4) CONSTRAINT clients_nn NOT NULL,
    areaID char(4),
+   site_size number(4),
+   street varchar(60),
+   city varchar(32),
+   stateID char(2),
+   zip number(5),
    CONSTRAINT client_sites_pk PRIMARY KEY (siteID),
-   FOREIGN KEY (clientID) REFERENCES CLIENTS (clientID),
-   FOREIGN KEY (areaID) REFERENCES AREAS (areaID),
-   CONSTRAINT client_site_emp_size CHECK (size BETWEEN 1 AND 9999)
+   CONSTRAINT client_site_emp_size CHECK (site_size BETWEEN 1 AND 9999)
 );
 
-
-CREATE TABLE COMMENTS (
-   review_details_ID char(12),
-   comments varchar(2000),
-   CONSTRAINT comments_pk PRIMARY KEY (review_details_ID),
-   FOREIGN KEY (review_details_ID) REFERENCES REVIEWS (review_details_ID)
+CREATE TABLE CLIENTS (
+   clientID char(4),
+   name varchar(60),
+   street varchar(60),
+   city varchar(32),
+   stateID char(2),
+   zip number(5),
+   discount number(3,2),
+   primary_contact_fname varchar(60),
+   primary_contact_minitial varchar(1),
+   primary_contact_lname varchar(60),
+   primary_contact_title varchar(100),
+   primary_contact_phone varchar(10),
+   primary_contact_email varchar(255),
+   CONSTRAINT clients_pk PRIMARY KEY (clientID)
 
 );
 
@@ -139,50 +126,37 @@ CREATE TABLE COMMENTS (
 CREATE TABLE COURSES  (
    courseID char(7),
    course_name varchar(255),
-   description varchar(255),
-   cost number(5,2),
+   description varchar(2000),
+   cost number(7,2),
    product_group_ID char(4) CONSTRAINT courses_product_group_nn NOT NULL,
    CONSTRAINT courses_pk PRIMARY KEY (courseID),
-   CONSTRAINT courses_cost CHECK (cost BETWEEN 0 AND 99999.99),
-   FOREIGN KEY (product_group_ID) REFERENCES PRODUCT_GROUPS (product_group_ID)
+   CONSTRAINT courses_cost CHECK (cost BETWEEN 0 AND 9999999.99)
 );
-
 
 CREATE TABLE CUSTOMER_REPS (
    empID char(9),
-   seniority varchar(255),
-   full-time_or_trainee varchar(255) CONSTRAINT ft_or_trainee_nn NOT NULL,
-   commission_rate number(1,2),
-   bonus_amount number(5,2),
+   seniority varchar(20),
+   fulltime_or_trainee varchar(10) CONSTRAINT ft_or_trainee_nn NOT NULL,
+   commission_rate number(3,2),
    quarter_bonus number(1),
+   bonus_amount number(7,2),
    branchID char(4),
    teamID char(5),
    CONSTRAINT customer_reps_pk PRIMARY KEY (empID, teamID),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID),
-   FOREIGN KEY (teamID) REFERENCES CUSTORMER_REP_TEAMS (teamID),
    CONSTRAINT cust_rep_quarter_bonus CHECK (quarter_bonus BETWEEN 1 AND 4),
-   CONSTRAINT cust_rep_bonus_amount CHECK (bonus_amount BETWEEN 0 AND 99999.99)
+   CONSTRAINT cust_rep_bonus_amount CHECK (bonus_amount BETWEEN 0 AND 9999999.99)
 
-);
-
-
-CREATE TABLE CUSTOMER_REP_SPECIALTIES (
-   empID char(9),
-   specialty char(4),
-   FOREIGN KEY (empID) REFERENCES CUSTOMER_REPS (empID),
-   FOREIGN KEY (specialty) REFERENCES PRODUCT_GROUPS (specialty),
 );
 
 
 CREATE TABLE CUSTOMER_REP_TEAMS (
    teamID char(5), 
-   team_name varchar(255), 
+   team_name varchar(60), 
    team_leadID char(9) CONSTRAINT cust_rep_team_leadID_nn NOT NULL, 
    form_date date, 
-   office_area char(4), 
-   CONSTRAINT customer_rep_teams_pk PRIMARY KEY (teamID),
-   FOREIGN KEY (team_leadID) REFERENCES EMPLOYEES (team_leadID),
-   FOREIGN KEY (office_area) REFERENCES AREAS (office_area)
+   specialty char(4), 
+   office_area char(4),
+   CONSTRAINT customer_rep_teams_pk PRIMARY KEY (teamID)
 
 );
 
@@ -191,96 +165,57 @@ CREATE TABLE DISTRIBUTE (
    stateID char(2), 
    productID char(6), 
    dist_details_ID char(12),
-   CONSTRAINT distribute_pk PRIMARY KEY (stateID, productID, dist_details_ID),
-   FOREIGN KEY (stateID) REFERENCES STATES (stateID),
-   FOREIGN KEY (productID) REFERENCES PRODUCTS (productID),
-   FOREIGN KEY (dist_details_ID) REFERENCES DISTRIBUTION_DETAILS (dist_details_ID)
+   CONSTRAINT distribute_pk PRIMARY KEY (stateID, productID, dist_details_ID)
 );
 
 
 CREATE TABLE DISTRIBUTION_DETAILS (
    dist_details_ID char(12), 
-   state_price_premium number(5,2),
    price_change_count number(5),
+   state_price_premium number(5,2),
    CONSTRAINT distribute_details_pk PRIMARY KEY (dist_details_ID)
-
-);
-
-
-CREATE TABLE EMAIL (
-   empID char(9), 
-   email varchar(255),
-   CONSTRAINT email_pk PRIMARY KEY (empID, email),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID)
 );
 
 
 CREATE TABLE EMERGENCY_ORDER (
    orderID char(13), 
    assigned_cus_repID char(9),
-   CONSTRAINT emergency_order_pk PRIMARY KEY (orderID, assigned_cus_repID),
-   FOREIGN KEY (orderID) REFERENCES ORDERS (orderID),
-   FOREIGN KEY (assigned_cus_repID) REFERENCES CUSTOMER_REPS (empID)
+   CONSTRAINT emergency_order_pk PRIMARY KEY (orderID, assigned_cus_repID)
 );
 
 
 CREATE TABLE EMPLOYEES (
    empID char(9), 
+   FName varchar (60), 
+   MInitial varchar(1), 
+   LName varchar(60),
+   email varchar(255) CONSTRAINT employee_email_nn NOT NULL,
+   DOB date, 
+   street varchar(60),
+   city varchar(32),
+   emp_state char(2),
+   zip number(5),
    SSN char(9), 
    start_date date, 
    end_date date, 
-   DOB date, 
-   FName varchar (255), 
-   Initial varchar(20), 
-   LName varchar(255),
    branchID char(4),
    CONSTRAINT employees_pk PRIMARY KEY (empID),
-   FOREIGN KEY (branchID) REFERENCES BRANCHES (branchID),
    CONSTRAINT emp_ssn_unique UNIQUE (ssn)
 );
 
 
 CREATE TABLE FUNCTIONAL_EMPLOYEES (
    empID char(9), 
-   role varchar(255), 
-   branchID,
-   CONSTRAINT functional_employees_pk PRIMARY KEY (empID, role, branchID),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID),
-   FOREIGN KEY (branchID) REFERENCES BRANCHES (branchID)
+   role varchar(32), 
+   branchID char(4),
+   CONSTRAINT functional_employees_pk PRIMARY KEY (empID, role, branchID)
 );
-
-
-CREATE TABLE INCIDENTS (
-   incidentID char(12), 
-   incident_date date,
-   complaint_date date,
-   description varchar(2000), 
-   count number(7), 
-   orderID char (13) CONSTRAINT incident_orderID_nn NOT NULL,
-   CONSTRAINT incidents_pk PRIMARY KEY (incidentID),
-   FOREIGN KEY (orderID) REFERENCES ORDERS (orderID) 
-);
-
-
-CREATE TABLE ITEMS (
-   order_details_ID char(13),
-   discount number (1,2), 
-   productID char(6), 
-   unitprice number(4,2), 
-   qty number(4),
-   CONSTRAINT items_pk PRIMARY KEY (order_details_ID, productID),
-   FOREIGN KEY (order_details_ID) REFERENCES ORDER_DETAILS (order_details_ID),
-   FOREIGN KEY (productID) REFERENCES PRODUCTS (productID)
-);
-
 
 CREATE TABLE MANAGERS (
    empID char(9),
    years_experience number(2), 
    branchID char(4),
-   CONSTRAINT managers_pk PRIMARY KEY (empID, branchID),
-   FOREIGN KEY (branchID) REFERENCES BRANCHES (branchID),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID)
+   CONSTRAINT managers_pk PRIMARY KEY (empID, branchID)
 
 );
 
@@ -288,43 +223,68 @@ CREATE TABLE MANAGERS (
 CREATE TABLE BRAND_MANAGERS (
    empID char(9), 
    promoID char(7),
-   CONSTRAINT brand_managers_pk PRIMARY KEY (empID, promoID),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID),
-   FOREIGN KEY (promoID) REFERENCES PROMOTIONS (promoID)
+   CONSTRAINT brand_managers_pk PRIMARY KEY (empID, promoID)
 );
 
 CREATE TABLE PRODUCT_LINE_MANAGERS (
    empID char(9), 
-   line_number char(8),
-   CONSTRAINT product_line_managers_pk PRIMARY KEY (empID, line_number),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID),
-   FOREIGN KEY (line_number) REFERENCES PRODUCT_LINES (line_number)
+   line_number number(8),
+   CONSTRAINT product_line_managers_pk PRIMARY KEY (empID, line_number)
 );
 
 
 CREATE TABLE REGIONAL_MANAGERS (
    empID char(9),
    regionID char(5),
-   CONSTRAINT regional_managers_pk PRIMARY KEY (empID, regionID),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID),
-   FOREIGN KEY (regionID) REFERENCES REGIONS (regionID)
+   CONSTRAINT regional_managers_pk PRIMARY KEY (empID, regionID)
+);
+
+CREATE TABLE SALARIED (
+   empID char(9),
+   salary number(11,2),
+   role varchar(32),
+   status varchar(10),
+   CONSTRAINT salaried_pk PRIMARY KEY (empID, salary),
+   CONSTRAINT salaried_salary CHECK(salary BETWEEN 0 AND 999999999.99)
+
 );
 
 
-CREATE TABLE MARKET_DEMOGRAPHICS (
-   stateID char(2), 
-   demographic varchar(255),
-   CONSTRAINT market_demographics_pk PRIMARY KEY (state_ID, demographic),
-   FOREIGN KEY (stateID) REFERENCES STATES (stateID)
+CREATE TABLE TEMPORARY (
+   empID char(9),
+   hourly_wage number(6,2),
+   CONSTRAINT temporary_pk PRIMARY KEY (empID,hourly_wage),
+   CONSTRAINT temporary_wage CHECK (hourly_wage BETWEEN 0 AND 9999.99)
 );
 
 
-CREATE TABLE NEW_PRODUCT (
-   visit_details_ID char(8),
+CREATE TABLE INCIDENTS (
+   incidentID char(12), 
+   incident_count number(7), 
+   incident_date date,
+   complaint_date date,
+   description varchar(2000), 
+   orderID char (13) CONSTRAINT incident_orderID_nn NOT NULL,
+   CONSTRAINT incidents_pk PRIMARY KEY (incidentID)
+);
+
+
+CREATE TABLE ITEMS (
+   order_details_ID char(14),
+   qty number(4),
+   unitprice number(6,2), 
+   discount number (1,2), 
+   productID char(6), 
+   orderID char(13),
+   CONSTRAINT items_pk PRIMARY KEY (order_details_ID, productID)
+
+);
+
+
+CREATE TABLE NEW_PRODUCTS (
    productID char(6),
-   CONSTRAINT new_product_pk PRIMARY KEY (visit_details_ID, productID),
-   FOREIGN KEY (visit_details_ID) REFERENCES VISIT_DETAILS (visit_details_ID),
-   FOREIGN KEY (productID) REFERENCES PRODUCTS (productID)
+   visit_details_ID char(8),
+   CONSTRAINT new_product_pk PRIMARY KEY (productID, visit_details_ID)
 
 );
 
@@ -333,53 +293,49 @@ CREATE TABLE ORDERS (
    orderID char(13), 
    order_date date, 
    order_time date, 
-   status varchar(255), 
+   status varchar(32), 
    description varchar(2000), 
    resolution_date date, 
    resolution_time date,  
    siteID char(6) CONSTRAINT orders_siteID_nn NOT NULL,
-   CONSTRAINT orders_pk PRIMARY KEY (orderID),
-   FOREIGN KEY (siteID) REFERENCES CLIENT_SITES (siteID)
+   CONSTRAINT orders_pk PRIMARY KEY (orderID)
 );
 
 
 CREATE TABLE ORDER_DETAILS (
    order_details_ID char(14),
-   siteID char(6) CONSTRAINT order_details_siteID_nn NOT NULL, 
    orderID char(13) CONSTRAINT order_details_orderID_nn NOT NULL, 
+   siteID char(6) CONSTRAINT order_details_siteID_nn NOT NULL, 
    ship_date date, 
-   ship_method varchar(255),
-   CONSTRAINT order_details_pk PRIMARY KEY (order_details_ID),
-   FOREIGN KEY (siteID) REFERENCES CLIENT_SITES (siteID),
-   FOREIGN KEY (orderID) REFERENCES ORDERS (orderID)
+   ship_method varchar(32),
+   CONSTRAINT order_details_pk PRIMARY KEY (order_details_ID)
 
 );
 
 
 CREATE TABLE PRODUCTS (
    productID char(6),
+   product_group_ID char(4),
    brand varchar(255),
-   product_avg_cost number(5,2),
    line_number number(8) CONSTRAINT products_line_number_nn NOT NULL,
-   CONSTRAINT products_pk PRIMARY KEY (productID),
-   FOREIGN KEY (line_number) REFERENCES PRODUCT_LINES (line_number)
+   product_avg_cost number(7,2),
+   CONSTRAINT products_pk PRIMARY KEY (productID)
 );
 
 
 CREATE TABLE PRODUCT_GROUPS (
    product_group_ID char(4),
-   group_name varchar(255),
+   group_name varchar(60),
    CONSTRAINT product_groups_pk PRIMARY KEY (product_group_ID)
 );
 
-
 CREATE TABLE PRODUCT_LINES (
-   line_number char(8),
-   line_notes varchar(2000),
+   line_number number(8),
+   line_name varchar(60),
    line_began date,
-   line_name varchar(255),
-   highest_profit_item varchar(255),
-   highest_volume_item varchar(255),
+   line_notes varchar(2000),
+   highest_profit_item char(6),
+   highest_volume_item char(6),
    CONSTRAINT product_lines_pk PRIMARY KEY (line_number)
 
 );
@@ -389,29 +345,26 @@ CREATE TABLE PROMOTE (
    promoID char(7),
    productID char(6),
    stateID char(2),
-   CONSTRAINT promote_pk PRIMARY KEY (promoID, productID, stateID),
-   FOREIGN KEY (promoID) REFERENCES PROMOTIONS (promoID),
-   FOREIGN KEY (productID) REFERENCES PRODUCTS (productID),
-   FOREIGN KEY (stateID) REFERENCES STATES (stateID)
+   CONSTRAINT promote_pk PRIMARY KEY (promoID, productID, stateID)
 
 );
 
 
 CREATE TABLE PROMOTIONS (
    promoID char(7),
+   productID char(6),
    start_date date,
    end_date date,
-   budget number(8,2),
+   budget number(10,2),
    empID char(9),
    CONSTRAINT promotions_pk PRIMARY KEY (promoID),
-   FOREIGN KEY (employees_pk) REFERENCES EMPLOYEES (empID),
    CONSTRAINT promotion_budget CHECK (budget BETWEEN 0 AND 99999999.99)
 );
 
 
 CREATE TABLE REGIONS (
    regionID char(5), 
-   regionName varchar(255),
+   regionName varchar(60),
    CONSTRAINT regions_pk PRIMARY KEY (regionID)
 
 );
@@ -421,123 +374,85 @@ CREATE TABLE REPORT (
    clientID char(4),
    empID char(9),
    incidentID char(12),
-   CONSTRAINT report_pk PRIMARY KEY (clientID, empID, incidentID),
-   FOREIGN KEY (clientID) REFERENCES CLIENTS (clientID),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID),
-   FOREIGN KEY (incidentID) REFERENCES INCIDENTS (incidentID)
+   CONSTRAINT report_pk PRIMARY KEY (clientID, empID, incidentID)
 );
-
-
-CREATE TABLE REVIEWS (
-   reviewID char(12),
-   incidentID char(12) CONSTRAINT reviews_incidentID_nn NOT NULL,
-   empID char(9) CONSTRAINT reviews_empID_nn NOT NULL,
-   CONSTRAINT reviews_pk PRIMARY KEY (reviewID),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID),
-   FOREIGN KEY (incidentID) REFERENCES INCIDENTS (incidentID)
-);
-
 
 CREATE TABLE REVIEW_DETAILS (
    review_details_ID char(12),
+   reviewID char(12) CONSTRAINT review_details_reviewID_nn NOT NULL,
    clientID char(4) CONSTRAINT review_details_clientID_nn NOT NULL,
    review_date date,
-   CONSTRAINT review_details_pk PRIMARY KEY (review_details_ID),
-   FOREIGN KEY (clientID) REFERENCES CLIENTS (clientID)
+   comments varchar(2000),
+   CONSTRAINT review_details_pk PRIMARY KEY (review_details_ID)
 
 );
 
-
-CREATE TABLE SALARIED (
-   empID char(9),
-   salary number(9,2),
-   role varchar(255),
-   status varchar(255),
-   CONSTRAINT salaried_pk PRIMARY KEY (empID, salary),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID),
-   CONSTRAINT salaried_salary CHECK(salary BETWEEN 0 AND 999999999.99)
-
+CREATE TABLE REVIEWS (
+   reviewID char(12),
+   empID char(9) CONSTRAINT reviews_empID_nn NOT NULL,
+   incidentID char(12) CONSTRAINT reviews_incidentID_nn NOT NULL,
+   CONSTRAINT reviews_pk PRIMARY KEY (reviewID)
 );
+
 
 
 CREATE TABLE SESSIONS (
    sessionID char(7), 
-   courseID char(7)
+   courseID char(7),
    start_date date,
    end_date date,
    location varchar(255),
-   empID char(9),
-   CONSTRAINT sessions_pk PRIMARY KEY (sessionID),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID),
-   FOREIGN KEY (courseID) REFERENCES COURSES (courseID)
-
+   instructor char(9),
+   CONSTRAINT sessions_pk PRIMARY KEY (sessionID)
 );
 
 
 CREATE TABLE SPECIALIZES (
    product_group_ID char(4),
-   sessionID char(9),
-   CONSTRAINT specializes_pk PRIMARY KEY (product_group_ID, sessionID),
-   FOREIGN KEY (sessionID) REFERENCES SESSIONS (sessionID),
-   FOREIGN KEY (product_group_ID) REFERENCES PRODUCT_GROUPS (product_group_ID)
+   sessionID char(7),
+   CONSTRAINT specializes_pk PRIMARY KEY (product_group_ID, sessionID)
 
 );
 
 
 CREATE TABLE STATES (
    stateID char(2),
-   name varchar(255),
-   network_rating varchar(255),
-   transportation_cost number(4,2),
+   name varchar(60),
+   network_rating varchar(60),
+   transportation_cost number(6,2),
+   demographics varchar(2000),
    CONSTRAINT states_pk PRIMARY KEY (stateID)
 
 );
 
 
 CREATE TABLE TAXES (
+   stateTax_percentage number(3,2),
    stateID char(2),
-   taxRate number(1,2),
-   CONSTRAINT taxes_pk PRIMARY KEY (stateID, taxRate),
-   FOREIGN KEY (stateID) REFERENCES STATES (stateID),
-   CONSTRAINT taxes_rate CHECK (taxRate BETWEEN 0 AND 1.00)
+   CONSTRAINT taxes_pk PRIMARY KEY (stateTax_percentage, stateID),
+   CONSTRAINT taxes_rate CHECK (stateTax_percentage BETWEEN 0 AND 1.00)
 
 );
-
-
-CREATE TABLE TEMPORARY (
-   empID char(9),
-   hourly_wage number(4,2),
-   CONSTRAINT temporary_pk PRIMARY KEY (empID,hourly_wage),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID),
-   CONSTRAINT temporary_wage CHECK (hourly_wage BETWEEN 0 AND 9999.99)
-);
-
 
 CREATE TABLE TRAIN_AT (
    sessionID char (7),
    empID char(9),
-   CONSTRAINT train_at_pk PRIMARY KEY (sessionID, empID),
-   FOREIGN KEY (sessionID) REFERENCES SESSIONS(sessionID),
-   FOREIGN KEY (empID) REFERENCES EMPLOYEES (empID)
-);
+   CONSTRAINT train_at_pk PRIMARY KEY (sessionID, empID)
 
+);
 
 CREATE TABLE VISITS (
    visitID char(6),
    siteID char(6) CONSTRAINT visit_siteID_nn NOT NULL,
    teamID char(5) CONSTRAINT visit_teamID_nn NOT NULL,
-   CONSTRAINT visit_pk PRIMARY KEY (visitID),
-   FOREIGN KEY (siteID) REFERENCES CLIENT_SITES (siteID),
-   FOREIGN KEY (teamID) REFERENCES CUSTORMER_REP_TEAMS (teamID)
+   CONSTRAINT visit_pk PRIMARY KEY (visitID)
 
 );
-
 
 CREATE TABLE VISIT_DETAILS (
    visit_details_ID char (8),
    visitID char(6) CONSTRAINT visit_details_nn NOT NULL,
-   feedback varchar(2000),
    visit_date date,
-   CONSTRAINT visit_details_pk PRIMARY KEY(visit_details_ID),
-   FOREIGN KEY (visitID) REFERENCES VISITS (visitID)
+   feedback varchar(2000),
+   CONSTRAINT visit_details_pk PRIMARY KEY(visit_details_ID)
 );

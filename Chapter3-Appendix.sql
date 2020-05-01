@@ -1,6 +1,3 @@
-
-
-
 drop table AREAS CASCADE CONSTRAINTS;
 drop table AREA_ZIP CASCADE CONSTRAINTS;
 drop table BRANCHES CASCADE CONSTRAINTS;
@@ -45,6 +42,7 @@ drop table TRAIN_AT CASCADE CONSTRAINTS;
 drop table VISITS CASCADE CONSTRAINTS;
 drop table VISIT_DETAILS CASCADE CONSTRAINTS;
 
+ALTER SESSION SET NLS_TIMESTAMP_FORMAT='HH24:MI';
 
 -- Create tables
 
@@ -292,11 +290,9 @@ CREATE TABLE NEW_PRODUCTS (
 CREATE TABLE ORDERS (
    orderID char(13), 
    order_date date, 
-   order_time date, 
+   order_time timestamp, 
    status varchar(32), 
    description varchar(2000), 
-   resolution_date date, 
-   resolution_time date,  
    siteID char(6) CONSTRAINT orders_siteID_nn NOT NULL,
    CONSTRAINT orders_pk PRIMARY KEY (orderID)
 );
@@ -348,7 +344,6 @@ CREATE TABLE PROMOTE (
    CONSTRAINT promote_pk PRIMARY KEY (promoID, productID, stateID)
 
 );
-
 
 CREATE TABLE PROMOTIONS (
    promoID char(7),

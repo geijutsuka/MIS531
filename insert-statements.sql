@@ -157,6 +157,14 @@ insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qt
 insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD57560382628', 'OR74183465803', 'P45723', 0.21, 418.54, 152);
 insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD20360090892', 'OR83969622999', 'P24603', 0.60, 186.44, 114);
 
+-- Insert data for STATES
+insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('TX', 'Texas', 'high', 61.49, 'lorem ipsum');
+insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('FL', 'Florida', 'low', 53.63, 'lorem ipsum');
+insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('VA', 'Virginia', 'high', 14.32, 'lorem ipsum');
+insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('NY', 'New York', 'low', 26.29, 'lorem ipsum');
+insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('AZ', 'Arizona', 'low', 39.21, 'lorem ipsum');
+insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('KS', 'Kansas', 'low', 32.54, 'lorem ipsum');
+insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('UT', 'Utah', 'medium', 64.94, 'lorem ipsum');
 
 commit;
 
@@ -173,6 +181,7 @@ select * from  INCIDENTS;
 select * from  ORDERS;
 select * from  ORDER_DETAILS;
 select * from  ITEMS;
+select * from  STATES;
 
 --------------------Testing--------------------
 set serveroutput on;

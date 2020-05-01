@@ -29,7 +29,7 @@ insert into EMPLOYEES (EmpID, Fname, Minitial, Lname, Email, DOB, Street, City, 
 insert into EMPLOYEES (EmpID, Fname, Minitial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E04671800', 'Digitube', 'S', 'Crown', 'mcrownf@elpais.com', '20-JUL-1993', '37 Namekagon Plaza', 'Pinellas Park', 'FL', 69597, 555923232, '04-APR-2013', NULL, 'B629');
 insert into EMPLOYEES (EmpID, Fname, Minitial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E91538344', 'Wikido', 'E', 'Reekie', 'areekieg@tamu.edu', '25-JUN-1991', '2 Scott Pass', 'Houston', 'TX', 23515, 371698996, '03-JUL-2011', '01-DEC-2018', 'B407');
 insert into EMPLOYEES (EmpID, Fname, Minitial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E13914267', 'Vidoo', 'O', 'Bremen', 'abremenh@geocities.com', '26-JUN-1996', '67043 Paget Junction', 'El Paso', 'TX', 52863, 504044444, '10-DEC-2011', NULL, 'B276');
-insert into EMPLOYEES (EmpID, Fname, Minitial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E14118330', 'Trilith', 'E', 'Marlor', 'dmarlori@goo.gl', '27-JAN-1968', '16 Jenifer Point', 'Atlanta', 'GA', 81395, 783222338, '15-JAN-2010', '07/16/2019', 'B324');
+insert into EMPLOYEES (EmpID, Fname, Minitial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E14118330', 'Trilith', 'E', 'Marlor', 'dmarlori@goo.gl', '27-JAN-1968', '16 Jenifer Point', 'Atlanta', 'GA', 81395, 783222338, '15-JAN-2010', '16-JUL-2019', 'B324');
 insert into EMPLOYEES (EmpID, Fname, Minitial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E87888640', 'Devpulse', 'G', 'Gettens', 'xgettensj@bloomberg.com', '28-APR-1976', '7 Carey Hill', 'Raleigh', 'NC', 17256, 284846787, '22-JUN-2004', NULL, 'B223');
 insert into EMPLOYEES (EmpID, Fname, Minitial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E94350515', 'Roomm', 'A', 'Hamill', 'mhamillk@squidoo.com', '29-MAR-1987', '5261 Lakeland Drive', 'Hollywood', 'FL', 97113, 177712230, '25-OCT-2005', NULL, 'B843');
 insert into EMPLOYEES (EmpID, Fname, Minitial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E59401135', 'Kazio', 'R', 'Ferrand', 'jferrandl@artisteer.com', '30-OCT-1988', '5043 High Crossing Center', 'Stockton', 'CA', 51800, 665769875, '06-JAN-2003', NULL, 'B070');
@@ -77,16 +77,16 @@ insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rat
 insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E94766506', 'entry', 'trainee', 0.96, 1, '4041.30', 'B253', 'TM886');
 
 -- Insert data for CUSTOMER_REP_SPECIALTIES
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR03');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR04');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E77935863', 'GR03');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E61065442', 'GR01');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E61065442', 'GR02');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR01');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E77935863', 'GR04');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E21391042', 'GR03');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E43206250', 'GR02');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E94766506', 'GR01');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E75887080', 'GR03');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E75887080', 'GR04');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E77935863', 'GR03');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E61065442', 'GR01');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E61065442', 'GR02');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E75887080', 'GR01');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E77935863', 'GR04');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E21391042', 'GR03');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E43206250', 'GR02');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E94766506', 'GR01');
 
 -- Insert data for CUSTOMER_REP_TEAMS
 insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM487', 'Puffin', 'E17036280', '17-APR-2018', 'A990');

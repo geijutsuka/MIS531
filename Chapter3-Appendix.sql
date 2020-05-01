@@ -140,7 +140,7 @@ CREATE TABLE CUSTOMER_REPS (
    bonus_amount number(7,2),
    branchID char(4),
    teamID char(5),
-   CONSTRAINT customer_reps_pk PRIMARY KEY (empID, teamID),
+   CONSTRAINT customer_reps_pk PRIMARY KEY (empID),
    CONSTRAINT cust_rep_quarter_bonus CHECK (quarter_bonus BETWEEN 1 AND 4),
    CONSTRAINT cust_rep_bonus_amount CHECK (bonus_amount BETWEEN 0 AND 9999999.99)
 );
@@ -149,7 +149,8 @@ CREATE TABLE CUSTOMER_REP_SPECIALTIES (
    empID char(9),
    specialty char(4),
    FOREIGN KEY (empID) REFERENCES CUSTOMER_REPS (empID),
-   FOREIGN KEY (specialty) REFERENCES PRODUCT_GROUPS (specialty)
+   FOREIGN KEY (specialty) REFERENCES PRODUCT_GROUPS (product_group_ID),
+   CONSTRAINT cusrep_specialties_pk PRIMARY KEY (empID, specialty)
 );
 
 CREATE TABLE CUSTOMER_REP_TEAMS (

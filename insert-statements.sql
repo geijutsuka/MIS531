@@ -166,6 +166,13 @@ insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demograp
 insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('KS', 'Kansas', 'low', 32.54, 'lorem ipsum');
 insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demographics) values ('UT', 'Utah', 'medium', 64.94, 'lorem ipsum');
 
+-- Insert data for PRODUCT_GROUPS
+insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR01', 'cosmetic');
+insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR02', 'dental');
+insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR03', 'dermal');
+insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR04', 'dental');
+
+
 commit;
 
 select * from  AREAS;
@@ -182,6 +189,7 @@ select * from  ORDERS;
 select * from  ORDER_DETAILS;
 select * from  ITEMS;
 select * from  STATES;
+select * from  PRODUCT_GROUPS;
 
 --------------------Testing--------------------
 set serveroutput on;

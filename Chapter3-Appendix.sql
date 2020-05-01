@@ -117,7 +117,6 @@ CREATE TABLE CLIENTS (
    primary_contact_phone varchar(10),
    primary_contact_email varchar(255),
    CONSTRAINT clients_pk PRIMARY KEY (clientID)
-
 );
 
 
@@ -143,19 +142,22 @@ CREATE TABLE CUSTOMER_REPS (
    CONSTRAINT customer_reps_pk PRIMARY KEY (empID, teamID),
    CONSTRAINT cust_rep_quarter_bonus CHECK (quarter_bonus BETWEEN 1 AND 4),
    CONSTRAINT cust_rep_bonus_amount CHECK (bonus_amount BETWEEN 0 AND 9999999.99)
-
 );
 
+CREATE TABLE CUSTOMER_REP_SPECIALTIES (
+   empID char(9),
+   specialty char(4),
+   FOREIGN KEY (empID) REFERENCES CUSTOMER_REPS (empID),
+   FOREIGN KEY (specialty) REFERENCES PRODUCT_GROUPS (specialty),
+);
 
 CREATE TABLE CUSTOMER_REP_TEAMS (
    teamID char(5), 
    team_name varchar(60), 
    team_leadID char(9) CONSTRAINT cust_rep_team_leadID_nn NOT NULL, 
    form_date date, 
-   specialty char(4), 
    office_area char(4),
    CONSTRAINT customer_rep_teams_pk PRIMARY KEY (teamID)
-
 );
 
 

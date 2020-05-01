@@ -147,13 +147,13 @@ insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_me
 
 -- Insert data for ITEMS
 insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD61268558055', 'OR77462531878', 'P90285', 0.34, 64.66, 185);
-insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD03793155861', 'OR44549999667', 'P98704', 0.00, 110.0, 32);
-insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD88963531631', 'OR21857777606', 'P97987', 0.00, 29.93, 67);
-insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD26035927620', 'OR31892267049', 'P50796', 0.00, 379.15, 43);
-insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD29742940247', 'OR23376751177', 'P90826', 0.45, 333.65, 41);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD03793155861', 'OR44549999667', 'P24603', 0.00, 110.0, 32);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD88963531631', 'OR21857777606', 'P11026', 0.00, 29.93, 67);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD26035927620', 'OR31892267049', 'P24603', 0.00, 379.15, 43);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD29742940247', 'OR23376751177', 'P24603', 0.45, 333.65, 41);
 insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD01614313119', 'OR29070583181', 'P98539', 0.26, 167.41, 297);
 insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD43153932600', 'OR78809410802', 'P11026', 0.06, 88.95, 70);
-insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD77608461832', 'OR07368537866', 'P15644', 0.00, 253.35, 275);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD77608461832', 'OR07368537866', 'P11026', 0.00, 253.35, 275);
 insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD57560382628', 'OR74183465803', 'P45723', 0.21, 418.54, 152);
 insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD20360090892', 'OR83969622999', 'P24603', 0.60, 186.44, 114);
 

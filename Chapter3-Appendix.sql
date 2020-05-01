@@ -267,7 +267,7 @@ CREATE TABLE ITEMS (
    order_details_ID char(14),
    qty number(4),
    unitprice number(6,2), 
-   discount number (1,2), 
+   discount number (3,2), 
    productID char(6), 
    orderID char(13),
    CONSTRAINT items_pk PRIMARY KEY (order_details_ID, productID)

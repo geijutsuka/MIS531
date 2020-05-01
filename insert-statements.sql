@@ -127,11 +127,11 @@ insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, 
 insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC757589979', '08/01/2018', '08/01/2018', 'Unsp injury of left innominate or subclavian artery, sequela', 'OR83969622999');
 
 -- Insert data for ORDERS
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR77462531878', '02/10/2020', '19:55', 'shipped', 'War op involving intentl restrict of air/airwy, milt, subs', 2, '02/10/2020', '20:50', 'CS7172');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR44549999667', '03/12/2020', '7:24', 'pending', 'Intentional self-harm by other specified means, sequela', 3, '03/12/2020', '8:09', 'CS7172');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR21857777606', '02/18/2020', '6:32', 'delivered', 'Partial traumatic amputation of right midfoot', 5, '02/18/2020', '7:49', 'CS0783');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR31892267049', '04/24/2020', '17:24', 'pending', 'Pathological fracture, unspecified finger(s), sequela', 5, '04/25/2020', '15:59', 'CS0783');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR23376751177', '01/03/2020', '9:59', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 6, '01/04/2020', '16:40', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR77462531878', '02/10/2020', '19:55', 'shipped', 'War op involving intentl restrict of air/airwy, milt, subs', 'CS7172');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR44549999667', '03/12/2020', '7:24', 'pending', 'Intentional self-harm by other specified means, sequela', 3, '03/12/2020', '8:09', 'CS7172');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR21857777606', '02/18/2020', '6:32', 'delivered', 'Partial traumatic amputation of right midfoot', 5, '02/18/2020', '7:49', 'CS0783');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR31892267049', '04/24/2020', '17:24', 'pending', 'Pathological fracture, unspecified finger(s), sequela', 5, '04/25/2020', '15:59', 'CS0783');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR23376751177', '01/03/2020', '9:59', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 6, '01/04/2020', '16:40', 'CS7777');
 
 -- Insert data for ORDER_DETAILS
 insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD61268558055', 'OR77462531878', 'CS7172', '08/16/2018', 'overnight');

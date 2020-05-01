@@ -78,15 +78,15 @@ insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_ra
 
 -- Insert data for CUSTOMER_REP_SPECIALTIES
 insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR03');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR10');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E77935863', 'GR16');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E61065442', 'GR23');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E61065442', 'GR32');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR40');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E77935863', 'GR12');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E21391042', 'GR33');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E43206250', 'GR20');
-insert into CUSTOMER_REPS (EmpID, Specialty) values ('E94766506', 'GR39');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR04');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E77935863', 'GR03');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E61065442', 'GR01');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E61065442', 'GR02');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR01');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E77935863', 'GR04');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E21391042', 'GR03');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E43206250', 'GR02');
+insert into CUSTOMER_REPS (EmpID, Specialty) values ('E94766506', 'GR01');
 
 -- Insert data for CUSTOMER_REP_TEAMS
 insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM487', 'Puffin', 'E17036280', '04/17/2018', 'A990');

@@ -165,7 +165,7 @@ insert into STATES (StateID, Name, Network_rating, Transportation_cost, Demograp
 insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR01', 'cosmetic');
 insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR02', 'dental');
 insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR03', 'dermal');
-insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR04', 'dental');
+insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR04', 'diabetic');
 
 -- Insert data for CUSTOMER_REP_SPECIALTIES
 insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E75887080', 'GR03');

@@ -133,6 +133,19 @@ insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incide
 insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR31892267049', '04/24/2020', '17:24', 'pending', 'Pathological fracture, unspecified finger(s), sequela', 5, '04/25/2020', '15:59', 'CS0783');
 insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR23376751177', '01/03/2020', '9:59', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 6, '01/04/2020', '16:40', 'CS7777');
 
+-- Insert data for ITEMS
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD61268558055', 'OR77462531878', 'P90285', 0.34, 64.66, 185);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD03793155861', 'OR44549999667', 'P98704', 0.00, 110.0, 32);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD88963531631', 'OR21857777606', 'P97987', 0.00, 29.93, 67);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD26035927620', 'OR31892267049', 'P50796', 0.00, 379.15, 43);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD29742940247', 'OR23376751177', 'P90826', 0.45, 333.65, 41);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD01614313119', 'OR29070583181', 'P98539', 0.26, 167.41, 297);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD43153932600', 'OR78809410802', 'P11026', 0.06, 88.95, 70);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD77608461832', 'OR07368537866', 'P15644', 0.00, 253.35, 275);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD57560382628', 'OR74183465803', 'P45723', 0.21, 418.54, 152);
+insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD20360090892', 'OR83969622999', 'P24603', 0.60, 186.44, 114);
+
+
 commit;
 
 select * from  AREAS;
@@ -146,6 +159,7 @@ select * from  CAN_SERVICE_AREA;
 select * from  CAN_SERVICE_CLIENT;
 select * from  INCIDENTS;
 select * from  ORDERS;
+select * from  ITEMS;
 
 --------------------Testing--------------------
 set serveroutput on;

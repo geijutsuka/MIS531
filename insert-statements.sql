@@ -76,18 +76,6 @@ insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rat
 insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter_bonus, Bonus_amount, BranchID, TeamID) values ('E76861181', 'entry', 'trainee', 0.11, 1, '4324.76', 'B253', 'TM886');
 insert into CUSTOMER_REPS (EmpID, Seniority, Fulltime_or_trainee, Commission_rate, Quarter_bonus, Bonus_amount, BranchID, TeamID) values ('E94766506', 'entry', 'trainee', 0.96, 1, '4041.30', 'B253', 'TM886');
 
--- Insert data for CUSTOMER_REP_SPECIALTIES
-insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E75887080', 'GR03');
-insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E75887080', 'GR04');
-insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E77935863', 'GR03');
-insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E61065442', 'GR01');
-insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E61065442', 'GR02');
-insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E75887080', 'GR01');
-insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E77935863', 'GR04');
-insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E21391042', 'GR03');
-insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E43206250', 'GR02');
-insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E94766506', 'GR01');
-
 -- Insert data for CUSTOMER_REP_TEAMS
 insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM487', 'Puffin', 'E17036280', '17-APR-2018', 'A990');
 insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM886', 'Whale', 'E61065442', '04-APR-2020', 'A349');
@@ -115,16 +103,16 @@ insert into CAN_SERVICE_CLIENT (ClientID, EmpID) values ('C0450', 'E30816862');
 insert into CAN_SERVICE_CLIENT (ClientID, EmpID) values ('C7729', 'E75887080');
 
 -- Insert data for INCIDENTS
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC665806994', '10-MAR-2020', '10-FEB-2020', 'Traum subdr hem w loss of consciousness of 31-59 min, init', 'OR77462531878');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC816611783', '12-MAR-2020', '10-MAR-2020', 'Nondisp seg fx shaft of l femr, 7thJ', 'OR44549999667');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC782926555', '18-MAR-2020', '17-FEB-2020', 'Other complications associated with artificial fertilization', 'OR21857777606');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC903458374', '24-MAR-2020', '25-JAN-2020', 'Poisoning by oth psychotropic drugs, undetermined, subs', 'OR31892267049');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC773603119', '03-MAR-2020', '04-JAN-2020', 'Contact with hot water in bath or tub, sequela', 'OR23376751177');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC021719877', '19-MAR-2020', '15-MAR-2018', 'Sltr-haris Type I physeal fx phalanx of right toe, init', 'OR29070583181');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC907009497', '10-MAY-2019', '09-APR-2018', 'Corrosion of left eye and adnexa, part unsp, subs encntr', 'OR78809410802');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC987310174', '25-AUG-2019', '04-JUN-2019', 'Nondisplaced oblique fracture of shaft of right tibia', 'OR07368537866');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC358115731', '14-JAN-2019', '27-DEC-2018', 'Chronic periodontitis, localized, unspecified severity', 'OR74183465803');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC757589979', '01-AUG-2018', '01-AUG-2018', 'Unsp injury of left innominate or subclavian artery, sequela', 'OR83969622999');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, Description, OrderID) values ('INC665806994', '10-MAR-2020', '10-FEB-2020', 'Traum subdr hem w loss of consciousness of 31-59 min, init', 'OR77462531878');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, Description, OrderID) values ('INC816611783', '12-MAR-2020', '10-MAR-2020', 'Nondisp seg fx shaft of l femr, 7thJ', 'OR44549999667');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, Description, OrderID) values ('INC782926555', '18-MAR-2020', '17-FEB-2020', 'Other complications associated with artificial fertilization', 'OR21857777606');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, Description, OrderID) values ('INC903458374', '24-MAR-2020', '25-JAN-2020', 'Poisoning by oth psychotropic drugs, undetermined, subs', 'OR31892267049');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, Description, OrderID) values ('INC773603119', '03-MAR-2020', '04-JAN-2020', 'Contact with hot water in bath or tub, sequela', 'OR23376751177');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, Description, OrderID) values ('INC021719877', '19-MAR-2020', '15-MAR-2018', 'Sltr-haris Type I physeal fx phalanx of right toe, init', 'OR29070583181');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, Description, OrderID) values ('INC907009497', '10-MAY-2019', '09-APR-2018', 'Corrosion of left eye and adnexa, part unsp, subs encntr', 'OR78809410802');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, Description, OrderID) values ('INC987310174', '25-AUG-2019', '04-JUN-2019', 'Nondisplaced oblique fracture of shaft of right tibia', 'OR07368537866');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, Description, OrderID) values ('INC358115731', '14-JAN-2019', '27-DEC-2018', 'Chronic periodontitis, localized, unspecified severity', 'OR74183465803');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, Description, OrderID) values ('INC757589979', '01-AUG-2018', '01-AUG-2018', 'Unsp injury of left innominate or subclavian artery, sequela', 'OR83969622999');
 
 -- Insert data for ORDERS
 insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR77462531878', '10-FEB-2020', '19:55', 'shipped', 'War op involving intentl restrict of air/airwy, milt, subs', 'CS7172');
@@ -179,6 +167,17 @@ insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR02', 'denta
 insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR03', 'dermal');
 insert into PRODUCT_GROUPS (Product_group_ID, Group_name) values ('GR04', 'dental');
 
+-- Insert data for CUSTOMER_REP_SPECIALTIES
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E75887080', 'GR03');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E75887080', 'GR04');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E77935863', 'GR03');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E61065442', 'GR01');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E61065442', 'GR02');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E75887080', 'GR01');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E77935863', 'GR04');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E21391042', 'GR03');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E43206250', 'GR02');
+insert into CUSTOMER_REP_SPECIALTIES (EmpID, Specialty) values ('E94766506', 'GR01');
 
 commit;
 

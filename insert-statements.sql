@@ -11,30 +11,30 @@ insert into AREAS (AreaID, StateID) values ('A625', 'WA');
 insert into AREAS (AreaID, StateID) values ('A883', 'CA');
 
 -- Insert data for EMPLOYEES
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E75066627', 'Aimbo', 'Z', 'Hanway', 'rhanway0@virginia.edu', '07/23/1932', '9 Paget Trail', 'Columbus', 'GA', 14028, 44973, '07/20/2012', '09/08/2016', 'B993');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E17036280', 'Eidel', 'I', 'Pattemore', 'spattemore1@reuters.com', '02/05/1940', '03232 Eagan Court', 'Charlotte', 'NC', 24830, 67800, '02/04/2008', '07/09/2016', 'B743');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E77935863', 'Ozu', 'L', 'Denford', 'idenford2@foxnews.com', '09/09/1945', '0 Troy Avenue', 'Washington', 'DC', 37985, 23573, '01/14/2009', '09/27/2019', 'B347');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E30816862', 'Edgepulse', 'V', 'Abbey', 'cabbey3@homestead.com', '04/14/1948', '256 Hintze Road', 'Birmingham', 'AL', 78437, 36855, '11/10/2004', '11/23/2017', 'B583');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E75887080', 'Kwideo', 'F', 'Gossan', 'jgossan4@msu.edu', '11/09/1999', '1089 Killdeer Circle', 'Albuquerque', 'NM', 10459, 85173, '01/03/2014', '11/16/2018', 'B490');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E83282873', 'Twitternation', 'F', 'Lenoir', 'llenoir5@comcast.net', '02/27/1951', '42400 South Parkway', 'Fort Lauderdale', 'FL', 43201, 50622, '10/19/2015', '05/13/2018', 'B993');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E20850381', 'Dablist', 'L', 'Ship', 'sship6@nbcnews.com', '05/19/1958', '6 Milwaukee Trail', 'Erie', 'PA', 17075, 76205, '11/28/2014', '08/18/2018', 'B459');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E21391042', 'Wikivu', 'P', 'People', 'wpeople7@hao123.com', '11/20/1938', '2 Hoffman Alley', 'Bellevue', 'WA', 87301, 93771, '03/29/2002', '10/18/2016', 'B730');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E61065442', 'Trunyx', 'D', 'Kinig', 'skinig8@wunderground.com', '06/10/1949', '18 Gateway Drive', 'Philadelphia', 'PA', 93081, 62813, '12/11/2001', '09/08/2019', 'B253');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E43206250', 'Kwilith', 'O', 'Crauford', 'ncrauford9@sciencedaily.com', '04/10/1931', '5190 Claremont Hill', 'Springfield', 'OH', 68678, 92096, '04/05/2002', '11/27/2018', 'B708');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E76861181', 'Realcube', 'I', 'Gecke', 'dgeckea@scribd.com', '01/22/1957', '3119 Kim Point', 'Tampa', 'FL', 11940, 89035, '03/08/2003', '11/30/2016', 'B437');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E94766506', 'Twimm', 'Y', 'Mepham', 'mmephamb@themeforest.net', '04/15/1933', '17056 Loftsgordon Road', 'Bloomington', 'IN', 78187, 97693, '09/15/2005', '03/27/2018', 'B579');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E43352766', 'Demivee', 'P', 'Wooddisse', 'gwooddissec@ucoz.ru', '10/13/1982', '3 Killdeer Trail', 'Port Charlotte', 'FL', 75834, 61651, '01/14/2012', '03/31/2017', 'B584');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E19156872', 'Thoughtblab', 'C', 'Tales', 'ktalesd@marriott.com', '10/15/1953', '673 Dahle Avenue', 'Hollywood', 'FL', 57242, 63142, '01/08/2008', '12/13/2018', 'B386');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E88991243', 'Agivu', 'K', 'Penticost', 'vpenticoste@prweb.com', '02/23/1957', '83 Steensland Circle', 'Sacramento', 'CA', 29073, 10457, '02/27/2007', '12/23/2017', 'B738');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E04671800', 'Digitube', 'S', 'Crown', 'mcrownf@elpais.com', '01/15/1961', '37 Namekagon Plaza', 'Pinellas Park', 'FL', 69597, 55592, '04/13/2013', '09/29/2018', 'B629');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E91538344', 'Wikido', 'E', 'Reekie', 'areekieg@tamu.edu', '03/08/1930', '2 Scott Pass', 'Houston', 'TX', 23515, 37166, '03/01/2011', '01/12/2018', 'B407');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E13914267', 'Vidoo', 'O', 'Bremen', 'abremenh@geocities.com', '09/29/1977', '67043 Paget Junction', 'El Paso', 'TX', 52863, 50404, '10/12/2011', '04/20/2017', 'B276');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E14118330', 'Trilith', 'E', 'Marlor', 'dmarlori@goo.gl', '10/21/1945', '16 Jenifer Point', 'Atlanta', 'GA', 81395, 78328, '06/13/2010', '07/16/2018', 'B324');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E87888640', 'Devpulse', 'G', 'Gettens', 'xgettensj@bloomberg.com', '01/07/2000', '7 Carey Hill', 'Raleigh', 'NC', 17256, 28487, '06/22/2004', '05/03/2018', 'B223');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E94350515', 'Roomm', 'A', 'Hamill', 'mhamillk@squidoo.com', '05/25/1971', '5261 Lakeland Drive', 'Hollywood', 'FL', 97113, 17770, '10/25/2005', '08/19/2017', 'B843');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E59401135', 'Kazio', 'R', 'Ferrand', 'jferrandl@artisteer.com', '12/28/1977', '5043 High Crossing Center', 'Stockton', 'CA', 51800, 66576, '06/01/2003', '10/23/2017', 'B070');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E84832713', 'Tagtune', 'R', 'Denacamp', 'ldenacampm@domainmarket.com', '12/26/1928', '58 Tomscot Plaza', 'Wilkes Barre', 'PA', 88268, 92992, '04/16/2005', '12/19/2017', 'B882');
-insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E36146661', 'Jaxworks', 'A', 'Aird', 'eairdn@so-net.ne.jp', '05/25/1920', '04 Troy Place', 'Minneapolis', 'MN', 17217, 21067, '11/25/2001', '03/02/2017', 'B823');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E75066627', 'Aimbo', 'Z', 'Hanway', 'rhanway0@virginia.edu', '23-JUL-1949', '9 Paget Trail', 'Columbus', 'GA', 14028, 440979838, '20-JUL-2012', NULL, 'B993');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E17036280', 'Eidel', 'I', 'Pattemore', 'spattemore1@reuters.com', '01-JAN-1958', '03232 Eagan Court', 'Charlotte', 'NC', 24830, 678888806, '02-APR-2008', NULL, 'B743');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E77935863', 'Ozu', 'L', 'Denford', 'idenford2@foxnews.com', '02-FEB-1978', '0 Troy Avenue', 'Washington', 'DC', 37985, 235873345, '01-JAN-2009', NULL, 'B347');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E30816862', 'Edgepulse', 'V', 'Abbey', 'cabbey3@homestead.com', '03-MAR-1977', '256 Hintze Road', 'Birmingham', 'AL', 78437, 368553445, '11-OCT-2004', NULL, 'B583');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E75887080', 'Kwideo', 'F', 'Gossan', 'jgossan4@msu.edu', '04-APR-1988', '1089 Killdeer Circle', 'Albuquerque', 'NM', 10459, 851732344, '01-MAR-2014', NULL, 'B490');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E83282873', 'Twitternation', 'F', 'Lenoir', 'llenoir5@comcast.net', '05-MAY-1980', '42400 South Parkway', 'Fort Lauderdale', 'FL', 43201, 506225656, '19-OCT-2015', NULL, 'B993');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E20850381', 'Dablist', 'L', 'Ship', 'sship6@nbcnews.com', '06-JUN-1999', '6 Milwaukee Trail', 'Erie', 'PA', 17075, 762055445, '28-NOV-2014', NULL, 'B459');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E21391042', 'Wikivu', 'P', 'People', 'wpeople7@hao123.com', '12-JUL-1990', '2 Hoffman Alley', 'Bellevue', 'WA', 87301, 937718989, '29-MAR-2002', NULL, 'B730');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E61065442', 'Trunyx', 'D', 'Kinig', 'skinig8@wunderground.com', '13-AUG-1979', '18 Gateway Drive', 'Philadelphia', 'PA', 93081, 628155663, '12-DEC-2001', NULL, 'B253');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E43206250', 'Kwilith', 'O', 'Crauford', 'ncrauford9@sciencedaily.com', '14-SEP-1983', '5190 Claremont Hill', 'Springfield', 'OH', 68678, 920945446, '04-APR-2002', NULL, 'B708');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E76861181', 'Realcube', 'I', 'Gecke', 'dgeckea@scribd.com', '15-OCT-1981', '3119 Kim Point', 'Tampa', 'FL', 11940, 890345455, '03-SEP-2003', NULL, 'B437');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E94766506', 'Twimm', 'Y', 'Mepham', 'mmephamb@themeforest.net', '16-NOV-1982', '17056 Loftsgordon Road', 'Bloomington', 'IN', 78187, 976923323, '09-OCT-2005', NULL, 'B579');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E43352766', 'Demivee', 'P', 'Wooddisse', 'gwooddissec@ucoz.ru', '17-DEC-1978', '3 Killdeer Trail', 'Port Charlotte', 'FL', 75834, 616522111, '01-JAN-2012', NULL, 'B584');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E19156872', 'Thoughtblab', 'C', 'Tales', 'ktalesd@marriott.com', '18-DEC-1969', '673 Dahle Avenue', 'Hollywood', 'FL', 57242, 631434322, '01-FEB-2008', '12/13/2018', 'B386');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E88991243', 'Agivu', 'K', 'Penticost', 'vpenticoste@prweb.com', '19-FEB-1980', '83 Steensland Circle', 'Sacramento', 'CA', 29073, 104587787, '27-FEB-2007', '12/23/2017', 'B738');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E04671800', 'Digitube', 'S', 'Crown', 'mcrownf@elpais.com', '20-JUL-1993', '37 Namekagon Plaza', 'Pinellas Park', 'FL', 69597, 555923232, '04-APR-2013', NULL, 'B629');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E91538344', 'Wikido', 'E', 'Reekie', 'areekieg@tamu.edu', '25-JUN-1991', '2 Scott Pass', 'Houston', 'TX', 23515, 371698996, '03-JUL-2011', '01/12/2018', 'B407');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E13914267', 'Vidoo', 'O', 'Bremen', 'abremenh@geocities.com', '26-JUN-1996', '67043 Paget Junction', 'El Paso', 'TX', 52863, 504044444, '10-DEC-2011', NULL, 'B276');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E14118330', 'Trilith', 'E', 'Marlor', 'dmarlori@goo.gl', '27-JAN-1968', '16 Jenifer Point', 'Atlanta', 'GA', 81395, 783222338, '15-JAN-2010', '07/16/2019', 'B324');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E87888640', 'Devpulse', 'G', 'Gettens', 'xgettensj@bloomberg.com', '28-APR-1976', '7 Carey Hill', 'Raleigh', 'NC', 17256, 284846787, '22-JUN-2004', NULL, 'B223');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E94350515', 'Roomm', 'A', 'Hamill', 'mhamillk@squidoo.com', '29-MAR-1987', '5261 Lakeland Drive', 'Hollywood', 'FL', 97113, 177712230, '25-OCT-2005', NULL, 'B843');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E59401135', 'Kazio', 'R', 'Ferrand', 'jferrandl@artisteer.com', '30-OCT-1988', '5043 High Crossing Center', 'Stockton', 'CA', 51800, 665769875, '06-JAN-2003', NULL, 'B070');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E84832713', 'Tagtune', 'R', 'Denacamp', 'ldenacampm@domainmarket.com', '22-DEC-1986', '58 Tomscot Plaza', 'Wilkes Barre', 'PA', 88268, 929924544, '04-JUL-2005', NULL, 'B882');
+insert into EMPLOYEES (EmpID, Fname, Initial, Lname, Email, DOB, Street, City, Emp_State, Zip, SSN, Start_date, End_date, BranchID) values ('E36146661', 'Jaxworks', 'A', 'Aird', 'eairdn@so-net.ne.jp', '08-FEB-1986', '04 Troy Place', 'Minneapolis', 'MN', 17217, 210674432, '11-AUG-2001', NULL, 'B823');
 
 -- Insert data for CLIENTS
 insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Primary_contact_fname, Primary_contact_minitial, Primary_contact_lname, Primary_contact_phone, Primary_contact_email) values ('C6555', 'Yakijo', '222 Bluejay Park', 'Rochester', 'NY', 87964, 0.03, 'Kassey', 'N', 'Trevers', '5854673661', 'ktrevers0@angelfire.com');
@@ -63,18 +63,18 @@ insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, Sta
 insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS3556', 'C6928', 'A883', 5705, '903 Quincy Pass', 'Sacramento', 'CA', 23277);
 
 -- Insert data for CUSTOMER_REPS
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E75066627', 'senior', 'full', 0.72, 2, '$1024.02', 'B993', 'TM487');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E17036280', 'lead', 'full', 0.23, 3, '$1272.77', 'B993', 'TM487');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E77935863', 'senior', 'full', 0.33, 4, '$1086.32', 'B347', 'TM179');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E30816862', 'entry', 'trainee', 0.23, 3, '$1355.53', 'B583', 'TM256');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E75887080', 'middle', 'full', 0.84, 3, '$1166.56', 'B490', 'TM748');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E83282873', 'entry', 'trainee', 0.09, 2, '$3180.01', 'B993', 'TM487');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E20850381', 'middle', 'full', 0.21, 3, '$247.99', 'B459', 'TM442');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E21391042', 'middle', 'full', 0.62, 2, '$2834.64', 'B730', 'TM080');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E61065442', 'lead', 'full', 0.18, 4, '$3926.14', 'B253', 'TM886');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E43206250', 'senior', 'full', 0.21, 1, '$2767.25', 'B708', 'TM400');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E76861181', 'entry', 'trainee', 0.11, 1, '$4324.76', 'B253', 'TM886');
-insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E94766506', 'entry', 'trainee', 0.96, 1, '$4041.30', 'B253', 'TM886');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E75066627', 'senior', 'full', 0.72, 2, '1024.02', 'B993', 'TM487');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E17036280', 'lead', 'full', 0.23, 3, '1272.77', 'B993', 'TM487');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E77935863', 'senior', 'full', 0.33, 4, '1086.32', 'B347', 'TM179');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E30816862', 'entry', 'trainee', 0.23, 3, '1355.53', 'B583', 'TM256');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E75887080', 'middle', 'full', 0.84, 3, '1166.56', 'B490', 'TM748');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E83282873', 'entry', 'trainee', 0.09, 2, '3180.01', 'B993', 'TM487');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E20850381', 'middle', 'full', 0.21, 3, '247.99', 'B459', 'TM442');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E21391042', 'middle', 'full', 0.62, 2, '2834.64', 'B730', 'TM080');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E61065442', 'lead', 'full', 0.18, 4, '3926.14', 'B253', 'TM886');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E43206250', 'senior', 'full', 0.21, 1, '2767.25', 'B708', 'TM400');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E76861181', 'entry', 'trainee', 0.11, 1, '4324.76', 'B253', 'TM886');
+insert into CUSTOMER_REPS (EmpID, Seniority, Full-time_or_trainee, Commission_rate, Quarter Bonus, Bonus Amount, BranchID, TeamID) values ('E94766506', 'entry', 'trainee', 0.96, 1, '4041.30', 'B253', 'TM886');
 
 -- Insert data for CUSTOMER_REP_SPECIALTIES
 insert into CUSTOMER_REPS (EmpID, Specialty) values ('E75887080', 'GR03');
@@ -89,16 +89,16 @@ insert into CUSTOMER_REPS (EmpID, Specialty) values ('E43206250', 'GR02');
 insert into CUSTOMER_REPS (EmpID, Specialty) values ('E94766506', 'GR01');
 
 -- Insert data for CUSTOMER_REP_TEAMS
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM487', 'Puffin', 'E17036280', '04/17/2018', 'A990');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM886', 'Whale', 'E61065442', '04/14/2020', 'A349');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM563', 'Booby', 'E95305709', '10/17/2018', 'A798');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM858', 'Roller', 'E59911802', '04/14/2020', 'A161');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM736', 'Turtle', 'E09755754', '02/28/2020', 'A932');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM455', 'Kookaburra', 'E25174553', '12/29/2019', 'A275');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM370', 'Boa', 'E65748697', '04/18/2019', 'A353');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM905', 'Bushpig', 'E85965402', '12/26/2019', 'A330');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM817', 'Wallaby', 'E64168049', '12/13/2019', 'A625');
-insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM686', 'Camel', 'E81391954', '02/24/2018', 'A883');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM487', 'Puffin', 'E17036280', '17-APR-2018', 'A990');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM886', 'Whale', 'E61065442', '04-APR-2020', 'A349');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM563', 'Booby', 'E95305709', '10-OCT-2018', 'A798');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM858', 'Roller', 'E59911802', '14-FEB-2020', 'A161');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM736', 'Turtle', 'E09755754', '28-DEC-2020', 'A932');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM455', 'Kookaburra', 'E25174553', '29-DEC-2019', 'A275');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM370', 'Boa', 'E65748697', '18-APR-2019', 'A353');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM905', 'Bushpig', 'E85965402', '26-JAN-2019', 'A330');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM817', 'Wallaby', 'E64168049', '12-JUN-2019', 'A625');
+insert into CUSTOMER_REP_TEAMS (TeamID, Team_name, Team_leadID, Form_date, Office_area) values ('TM686', 'Camel', 'E81391954', '24-JUL-2018', 'A883');
 
 -- Insert data for CAN_SERVICE_AREA
 insert into CAN_SERVICE_AREA (AreaID, TeamID) values ('A990', 'TM487');
@@ -115,40 +115,40 @@ insert into CAN_SERVICE_CLIENT (ClientID, EmpID) values ('C0450', 'E30816862');
 insert into CAN_SERVICE_CLIENT (ClientID, EmpID) values ('C7729', 'E75887080');
 
 -- Insert data for INCIDENTS
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC665806994', '03/10/2020', '02/10/2020', 'Traum subdr hem w loss of consciousness of 31-59 min, init', 'OR77462531878');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC816611783', '03/12/2020', '03/10/2020', 'Nondisp seg fx shaft of l femr, 7thJ', 'OR44549999667');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC782926555', '03/18/2020', '02/17/2020', 'Other complications associated with artificial fertilization', 'OR21857777606');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC903458374', '03/24/2020', '04/25/2020', 'Poisoning by oth psychotropic drugs, undetermined, subs', 'OR31892267049');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC773603119', '03/03/2020', '01/04/2020', 'Contact with hot water in bath or tub, sequela', 'OR23376751177');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC021719877', '03/19/2020', '03/15/2018', 'Sltr-haris Type I physeal fx phalanx of right toe, init', 'OR29070583181');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC907009497', '05/10/2019', '12/09/2018', 'Corrosion of left eye and adnexa, part unsp, subs encntr', 'OR78809410802');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC987310174', '08/25/2019', '08/04/2019', 'Nondisplaced oblique fracture of shaft of right tibia', 'OR07368537866');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC358115731', '01/14/2019', '12/27/2018', 'Chronic periodontitis, localized, unspecified severity', 'OR74183465803');
-insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC757589979', '08/01/2018', '08/01/2018', 'Unsp injury of left innominate or subclavian artery, sequela', 'OR83969622999');
+insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC665806994', '10-MAR-2020', '10-FEB-2020', 'Traum subdr hem w loss of consciousness of 31-59 min, init', 'OR77462531878');
+insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC816611783', '12-MAR-2020', '10-MAR-2020', 'Nondisp seg fx shaft of l femr, 7thJ', 'OR44549999667');
+insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC782926555', '18-MAR-2020', '17-FEB-2020', 'Other complications associated with artificial fertilization', 'OR21857777606');
+insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC903458374', '24-MAR-2020', '25-JAN-2020', 'Poisoning by oth psychotropic drugs, undetermined, subs', 'OR31892267049');
+insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC773603119', '03-MAR-2020', '04-JAN-2020', 'Contact with hot water in bath or tub, sequela', 'OR23376751177');
+insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC021719877', '19-MAR-2020', '15-MAR-2018', 'Sltr-haris Type I physeal fx phalanx of right toe, init', 'OR29070583181');
+insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC907009497', '10-MAY-2019', '09-APR-2018', 'Corrosion of left eye and adnexa, part unsp, subs encntr', 'OR78809410802');
+insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC987310174', '25-AUG-2019', '04-JUN-2019', 'Nondisplaced oblique fracture of shaft of right tibia', 'OR07368537866');
+insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC358115731', '14-JAN-2019', '27-DEC-2018', 'Chronic periodontitis, localized, unspecified severity', 'OR74183465803');
+insert into INCIDENTS (Incident_ID, Incident_date, Complaint_date, Description, OrderID) values ('INC757589979', '01-AUG-2018', '01-AUG-2018', 'Unsp injury of left innominate or subclavian artery, sequela', 'OR83969622999');
 
 -- Insert data for ORDERS
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR77462531878', '03/10/2020', '19:55', 'shipped', 'War op involving intentl restrict of air/airwy, milt, subs', 'CS7172');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR44549999667', '03/12/2020', '7:24', 'pending', 'Intentional self-harm by other specified means, sequela', 3, '03/12/2020', '8:09', 'CS7172');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR21857777606', '03/18/2020', '6:32', 'delivered', 'Partial traumatic amputation of right midfoot', 5, '02/18/2020', '7:49', 'CS0783');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR31892267049', '03/24/2020', '17:24', 'pending', 'Pathological fracture, unspecified finger(s), sequela', 5, '04/25/2020', '15:59', 'CS0783');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR23376751177', '03/03/2020', '20:00', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 6, '01/04/2020', '16:40', 'CS7777');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR29070583181', '03/19/2020', '8:50', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 6, '01/04/2020', '16:40', 'CS7777');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR78809410802', '05/09/2019', '17:35', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 6, '01/04/2020', '16:40', 'CS7777');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR07368537866', '08/24/2019', '9:30', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 6, '01/04/2020', '16:40', 'CS7777');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR74183465803', '01/13/2019', '8:15', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 6, '01/04/2020', '16:40', 'CS7777');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR83969622999', '08/01/2018', '11:45', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 6, '01/04/2020', '16:40', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR77462531878', '10-FEB-2020', '19:55', 'shipped', 'War op involving intentl restrict of air/airwy, milt, subs', 'CS7172');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR44549999667', '12-FEB-2020', '7:24', 'pending', 'Intentional self-harm by other specified means, sequela', 'CS7172');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR21857777606', '18-FEB-2020', '6:32', 'delivered', 'Partial traumatic amputation of right midfoot', 'CS0783');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR31892267049', '24-FEB-2020', '17:24', 'pending', 'Pathological fracture, unspecified finger(s), sequela', 'CS0783');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR23376751177', '03-FEB-2020', '20:00', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR29070583181', '19-FEB-2020', '8:50', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR78809410802', '09-MAY-2019', '17:35', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR07368537866', '24-JUL-2019', '9:30', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR74183465803', '13-JAN-2019', '8:15', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR83969622999', '01-AUG-2018', '11:45', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
 
 -- Insert data for ORDER_DETAILS
-insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD61268558055', 'OR77462531878', 'CS7172', '08/16/2018', 'overnight');
-insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD03793155861', 'OR44549999667', 'CS6195', '11/02/2019', 'overnight');
-insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD88963531631', 'OR21857777606', 'CS0783', '03/18/2019', 'ground');
-insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD26035927620', 'OR31892267049', 'CS4019', '08/19/2019', 'ground');
-insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD29742940247', 'OR23376751177', 'CS7777', '11/03/2018', 'ground');
-insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD01614313119', 'OR29070583181', 'CS3644', '05/15/2019', 'overnight');
-insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD43153932600', 'OR78809410802', 'CS3340', '03/16/2019', 'ground');
-insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD77608461832', 'OR07368537866', 'CS6157', '11/15/2019', 'ground');
-insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD57560382628', 'OR74183465803', 'CS5734', '01/30/2020', 'priority');
-insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD20360090892', 'OR83969622999', 'CS3556', '09/07/2018', 'ground');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD61268558055', 'OR77462531878', 'CS7172', '12-FEB-2020', 'overnight');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD03793155861', 'OR44549999667', 'CS6195', '13-FEB-2020', 'overnight');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD88963531631', 'OR21857777606', 'CS0783', '19-FEB-2020', 'ground');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD26035927620', 'OR31892267049', 'CS4019', '24-FEB-2020', 'ground');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD29742940247', 'OR23376751177', 'CS7777', '04-FEB-2020', 'ground');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD01614313119', 'OR29070583181', 'CS3644', '19-FEB-2020', 'overnight');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD43153932600', 'OR78809410802', 'CS3340', '10-MAY-2019', 'ground');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD77608461832', 'OR07368537866', 'CS6157', '24-JUL-2019', 'ground');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD57560382628', 'OR74183465803', 'CS5734', '16-JAN-2019', 'priority');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD20360090892', 'OR83969622999', 'CS3556', '05-AUG-2018', 'ground');
 
 -- Insert data for ITEMS
 insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD61268558055', 'OR77462531878', 'P90285', 0.34, 64.66, 185);

@@ -79,20 +79,20 @@ CREATE TABLE MAIN_BRANCHES (
 
 
 CREATE TABLE CAN_SERVICE_AREA(
-   clientID char(4),
+   areaID char(4),
    empID char(9),
-   CONSTRAINT can_service_area_pk PRIMARY KEY (clientID, empID)
+   CONSTRAINT can_service_area_pk PRIMARY KEY (areaID, empID)
 );
 
 CREATE TABLE CAN_SERVICE_CLIENT(
-   areaID char(4),
+   clientID char(5),
    teamID char(5),
-   CONSTRAINT can_service_client_pk PRIMARY KEY (areaID, teamID)
+   CONSTRAINT can_service_client_pk PRIMARY KEY (clientID, teamID)
 );
 
 CREATE TABLE CLIENT_SITES (
    siteID char(6),
-   clientID char(4) CONSTRAINT clients_nn NOT NULL,
+   clientID char(5) CONSTRAINT clients_nn NOT NULL,
    areaID char(4),
    site_size number(4),
    street varchar(60),
@@ -143,14 +143,6 @@ CREATE TABLE CUSTOMER_REPS (
    CONSTRAINT customer_reps_pk PRIMARY KEY (empID),
    CONSTRAINT cust_rep_quarter_bonus CHECK (quarter_bonus BETWEEN 1 AND 4),
    CONSTRAINT cust_rep_bonus_amount CHECK (bonus_amount BETWEEN 0 AND 9999999.99)
-);
-
-CREATE TABLE CUSTOMER_REP_SPECIALTIES (
-   empID char(9),
-   specialty char(4),
-   FOREIGN KEY (empID) REFERENCES CUSTOMER_REPS (empID),
-   FOREIGN KEY (specialty) REFERENCES PRODUCT_GROUPS (product_group_ID),
-   CONSTRAINT cusrep_specialties_pk PRIMARY KEY (empID, specialty)
 );
 
 CREATE TABLE CUSTOMER_REP_TEAMS (
@@ -454,4 +446,12 @@ CREATE TABLE VISIT_DETAILS (
    visit_date date,
    feedback varchar(2000),
    CONSTRAINT visit_details_pk PRIMARY KEY(visit_details_ID)
+);
+
+CREATE TABLE CUSTOMER_REP_SPECIALTIES (
+   empID char(9),
+   specialty char(4),
+   FOREIGN KEY (empID) REFERENCES CUSTOMER_REPS (empID),
+   FOREIGN KEY (specialty) REFERENCES PRODUCT_GROUPS (product_group_ID),
+   CONSTRAINT cusrep_specialties_pk PRIMARY KEY (empID, specialty)
 );

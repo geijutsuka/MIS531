@@ -133,6 +133,18 @@ insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incide
 insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR31892267049', '04/24/2020', '17:24', 'pending', 'Pathological fracture, unspecified finger(s), sequela', 5, '04/25/2020', '15:59', 'CS0783');
 insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, Incident_count, Resolution_date, Resolution_time, SiteID) values ('OR23376751177', '01/03/2020', '9:59', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 6, '01/04/2020', '16:40', 'CS7777');
 
+-- Insert data for ORDER_DETAILS
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD61268558055', 'OR77462531878', 'CS7172', '08/16/2018', 'overnight');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD03793155861', 'OR44549999667', 'CS6195', '11/02/2019', 'overnight');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD88963531631', 'OR21857777606', 'CS0783', '03/18/2019', 'ground');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD26035927620', 'OR31892267049', 'CS4019', '08/19/2019', 'ground');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD29742940247', 'OR23376751177', 'CS7777', '11/03/2018', 'ground');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD01614313119', 'OR29070583181', 'CS3644', '05/15/2019', 'overnight');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD43153932600', 'OR78809410802', 'CS3340', '03/16/2019', 'ground');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD77608461832', 'OR07368537866', 'CS6157', '11/15/2019', 'ground');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD57560382628', 'OR74183465803', 'CS5734', '01/30/2020', 'priority');
+insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD20360090892', 'OR83969622999', 'CS3556', '09/07/2018', 'ground');
+
 -- Insert data for ITEMS
 insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD61268558055', 'OR77462531878', 'P90285', 0.34, 64.66, 185);
 insert into ITEMS (Order_details_ID, OrderID, ProductID, Discount, Unitprice, Qty) values ('ORD03793155861', 'OR44549999667', 'P98704', 0.00, 110.0, 32);
@@ -159,6 +171,7 @@ select * from  CAN_SERVICE_AREA;
 select * from  CAN_SERVICE_CLIENT;
 select * from  INCIDENTS;
 select * from  ORDERS;
+select * from  ORDER_DETAILS;
 select * from  ITEMS;
 
 --------------------Testing--------------------

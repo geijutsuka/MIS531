@@ -52,10 +52,10 @@ insert into CLIENTS (ClientID, Name, Street, City, StateID, Zip, Discount, Prima
 
 -- Insert data for CLIENT_SITES
 insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS7172', 'C9887', 'A990', 6590, '8 Meadow Vale Street', 'Phoenix', 'AZ', 90446);
-insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS6195', 'C6144', 'A330', 9968, '15984 Quincy Park', 'Lakewood', 'WA', 37447);
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS6195', 'C6555', 'A330', 9968, '15984 Quincy Park', 'Lakewood', 'WA', 37447);
 insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS0783', 'C6555', 'A161', 4275, '338 Di Loreto Avenue', 'Buffalo', 'NY', 70641);
 insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS4019', 'C6959', 'A798', 4858, '5839 Pond Park', 'Topeka', 'KS', 60662);
-insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS7777', 'C3105', 'A349', 5560, '386 Colorado Park', 'Whittier', 'CA', 65807);
+insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS7777', 'C6928', 'A349', 5560, '386 Colorado Park', 'Whittier', 'CA', 65807);
 insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS3644', 'C6928', 'A932', 8355, '3598 Hooker Pass', 'Salinas', 'CA', 32800);
 insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS3340', 'C9887', 'A990', 8300, '660 Vera Point', 'Phoenix', 'AZ', 32829);
 insert into CLIENT_SITES (SiteID, ClientID, AreaID, Site_size, Street, City, StateID, Zip) values ('CS6157', 'C6928', 'A353', 6380, '0 Manufacturers Trail', 'San Francisco', 'CA', 13803);

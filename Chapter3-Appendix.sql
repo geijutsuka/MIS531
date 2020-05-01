@@ -80,14 +80,14 @@ CREATE TABLE MAIN_BRANCHES (
 
 CREATE TABLE CAN_SERVICE_AREA(
    areaID char(4),
-   empID char(9),
-   CONSTRAINT can_service_area_pk PRIMARY KEY (areaID, empID)
+   teamID char(5),
+   CONSTRAINT can_service_area_pk PRIMARY KEY (areaID, teamID)
 );
 
 CREATE TABLE CAN_SERVICE_CLIENT(
    clientID char(5),
-   teamID char(5),
-   CONSTRAINT can_service_client_pk PRIMARY KEY (clientID, teamID)
+   empID char(9),
+   CONSTRAINT can_service_client_pk PRIMARY KEY (clientID, empID)
 );
 
 CREATE TABLE CLIENT_SITES (

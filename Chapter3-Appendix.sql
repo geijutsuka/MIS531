@@ -76,7 +76,6 @@ CREATE TABLE MAIN_BRANCHES (
    CONSTRAINT main_branches_pk PRIMARY KEY (main_branch_ID, regionID)
 );
 
-
 CREATE TABLE CAN_SERVICE_AREA(
    areaID char(4),
    teamID char(5),
@@ -119,7 +118,6 @@ CREATE TABLE CLIENTS (
    CONSTRAINT clients_pk PRIMARY KEY (clientID)
 );
 
-
 CREATE TABLE COURSES  (
    courseID char(7),
    course_name varchar(255),
@@ -153,14 +151,12 @@ CREATE TABLE CUSTOMER_REP_TEAMS (
    CONSTRAINT customer_rep_teams_pk PRIMARY KEY (teamID)
 );
 
-
 CREATE TABLE DISTRIBUTE (
    stateID char(2), 
    productID char(6), 
    dist_details_ID char(12),
    CONSTRAINT distribute_pk PRIMARY KEY (stateID, productID, dist_details_ID)
 );
-
 
 CREATE TABLE DISTRIBUTION_DETAILS (
    dist_details_ID char(12), 
@@ -169,13 +165,11 @@ CREATE TABLE DISTRIBUTION_DETAILS (
    CONSTRAINT distribute_details_pk PRIMARY KEY (dist_details_ID)
 );
 
-
 CREATE TABLE EMERGENCY_ORDER (
    orderID char(13), 
    assigned_cus_repID char(9),
    CONSTRAINT emergency_order_pk PRIMARY KEY (orderID, assigned_cus_repID)
 );
-
 
 CREATE TABLE EMPLOYEES (
    empID char(9), 
@@ -196,7 +190,6 @@ CREATE TABLE EMPLOYEES (
    CONSTRAINT emp_ssn_unique UNIQUE (ssn)
 );
 
-
 CREATE TABLE FUNCTIONAL_EMPLOYEES (
    empID char(9), 
    role varchar(32), 
@@ -209,9 +202,7 @@ CREATE TABLE MANAGERS (
    years_experience number(2), 
    branchID char(4),
    CONSTRAINT managers_pk PRIMARY KEY (empID, branchID)
-
 );
-
 
 CREATE TABLE BRAND_MANAGERS (
    empID char(9), 
@@ -224,7 +215,6 @@ CREATE TABLE PRODUCT_LINE_MANAGERS (
    line_number number(8),
    CONSTRAINT product_line_managers_pk PRIMARY KEY (empID, line_number)
 );
-
 
 CREATE TABLE REGIONAL_MANAGERS (
    empID char(9),
@@ -239,9 +229,7 @@ CREATE TABLE SALARIED (
    status varchar(10),
    CONSTRAINT salaried_pk PRIMARY KEY (empID, salary),
    CONSTRAINT salaried_salary CHECK(salary BETWEEN 0 AND 999999999.99)
-
 );
-
 
 CREATE TABLE TEMPORARY (
    empID char(9),
@@ -250,7 +238,6 @@ CREATE TABLE TEMPORARY (
    CONSTRAINT temporary_wage CHECK (hourly_wage BETWEEN 0 AND 9999.99)
 );
 
-
 CREATE TABLE INCIDENTS (
    incidentID char(12), 
    incident_count number(7), 
@@ -258,9 +245,9 @@ CREATE TABLE INCIDENTS (
    complaint_date date,
    description varchar(2000), 
    orderID char (13) CONSTRAINT incident_orderID_nn NOT NULL,
+   clientID char (5) CONSTRAINT incident_clinetID_nn NOT NULL,
    CONSTRAINT incidents_pk PRIMARY KEY (incidentID)
 );
-
 
 CREATE TABLE ITEMS (
    order_details_ID char(14),
@@ -270,17 +257,13 @@ CREATE TABLE ITEMS (
    productID char(6), 
    orderID char(13),
    CONSTRAINT items_pk PRIMARY KEY (order_details_ID, productID)
-
 );
-
 
 CREATE TABLE NEW_PRODUCTS (
    productID char(6),
    visit_details_ID char(8),
    CONSTRAINT new_product_pk PRIMARY KEY (productID, visit_details_ID)
-
 );
-
 
 CREATE TABLE ORDERS (
    orderID char(13), 
@@ -292,7 +275,6 @@ CREATE TABLE ORDERS (
    CONSTRAINT orders_pk PRIMARY KEY (orderID)
 );
 
-
 CREATE TABLE ORDER_DETAILS (
    order_details_ID char(14),
    orderID char(13) CONSTRAINT order_details_orderID_nn NOT NULL, 
@@ -300,9 +282,7 @@ CREATE TABLE ORDER_DETAILS (
    ship_date date, 
    ship_method varchar(32),
    CONSTRAINT order_details_pk PRIMARY KEY (order_details_ID)
-
 );
-
 
 CREATE TABLE PRODUCTS (
    productID char(6),
@@ -312,7 +292,6 @@ CREATE TABLE PRODUCTS (
    product_avg_cost number(7,2),
    CONSTRAINT products_pk PRIMARY KEY (productID)
 );
-
 
 CREATE TABLE PRODUCT_GROUPS (
    product_group_ID char(4),
@@ -328,16 +307,13 @@ CREATE TABLE PRODUCT_LINES (
    highest_profit_item char(6),
    highest_volume_item char(6),
    CONSTRAINT product_lines_pk PRIMARY KEY (line_number)
-
 );
-
 
 CREATE TABLE PROMOTE (
    promoID char(7),
    productID char(6),
    stateID char(2),
    CONSTRAINT promote_pk PRIMARY KEY (promoID, productID, stateID)
-
 );
 
 CREATE TABLE PROMOTIONS (
@@ -351,14 +327,11 @@ CREATE TABLE PROMOTIONS (
    CONSTRAINT promotion_budget CHECK (budget BETWEEN 0 AND 99999999.99)
 );
 
-
 CREATE TABLE REGIONS (
    regionID char(5), 
    regionName varchar(60),
    CONSTRAINT regions_pk PRIMARY KEY (regionID)
-
 );
-
 
 CREATE TABLE REPORT (
    clientID char(4),
@@ -385,14 +358,11 @@ CREATE TABLE SESSIONS (
    CONSTRAINT sessions_pk PRIMARY KEY (sessionID)
 );
 
-
 CREATE TABLE SPECIALIZES (
    product_group_ID char(4),
    sessionID char(7),
    CONSTRAINT specializes_pk PRIMARY KEY (product_group_ID, sessionID)
-
 );
-
 
 CREATE TABLE STATES (
    stateID char(2),
@@ -401,23 +371,19 @@ CREATE TABLE STATES (
    transportation_cost number(6,2),
    demographics varchar(2000),
    CONSTRAINT states_pk PRIMARY KEY (stateID)
-
 );
-
 
 CREATE TABLE TAXES (
    stateTax_percentage number(3,2),
    stateID char(2),
    CONSTRAINT taxes_pk PRIMARY KEY (stateTax_percentage, stateID),
    CONSTRAINT taxes_rate CHECK (stateTax_percentage BETWEEN 0 AND 1.00)
-
 );
 
 CREATE TABLE TRAIN_AT (
    sessionID char (7),
    empID char(9),
    CONSTRAINT train_at_pk PRIMARY KEY (sessionID, empID)
-
 );
 
 CREATE TABLE VISITS (
@@ -425,7 +391,6 @@ CREATE TABLE VISITS (
    siteID char(6) CONSTRAINT visit_siteID_nn NOT NULL,
    teamID char(5) CONSTRAINT visit_teamID_nn NOT NULL,
    CONSTRAINT visit_pk PRIMARY KEY (visitID)
-
 );
 
 CREATE TABLE VISIT_DETAILS (

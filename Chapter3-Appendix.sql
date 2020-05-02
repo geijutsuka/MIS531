@@ -240,7 +240,6 @@ CREATE TABLE TEMPORARY (
 
 CREATE TABLE INCIDENTS (
    incidentID char(12), 
-   incident_count number(7), 
    incident_date date,
    complaint_date date,
    description varchar(2000), 

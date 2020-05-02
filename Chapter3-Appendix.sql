@@ -34,7 +34,6 @@ drop table PROMOTIONS CASCADE CONSTRAINTS;
 drop table REGIONS CASCADE CONSTRAINTS;
 drop table REPORT CASCADE CONSTRAINTS;
 drop table REVIEW_DETAILS CASCADE CONSTRAINTS;
-drop table REVIEWS CASCADE CONSTRAINTS;
 drop table SESSIONS CASCADE CONSTRAINTS;
 drop table SPECIALIZES CASCADE CONSTRAINTS;
 drop table STATES CASCADE CONSTRAINTS;
@@ -369,23 +368,12 @@ CREATE TABLE REPORT (
 );
 
 CREATE TABLE REVIEW_DETAILS (
-   review_details_ID char(12),
    reviewID char(12) CONSTRAINT review_details_reviewID_nn NOT NULL,
    clientID char(4) CONSTRAINT review_details_clientID_nn NOT NULL,
    review_date date,
-   comments varchar(2000),
-   CONSTRAINT review_details_pk PRIMARY KEY (review_details_ID)
-
+   comment varchar(2000),
+   CONSTRAINT review_details_pk PRIMARY KEY (reviewID)
 );
-
-CREATE TABLE REVIEWS (
-   reviewID char(12),
-   empID char(9) CONSTRAINT reviews_empID_nn NOT NULL,
-   incidentID char(12) CONSTRAINT reviews_incidentID_nn NOT NULL,
-   CONSTRAINT reviews_pk PRIMARY KEY (reviewID)
-);
-
-
 
 CREATE TABLE SESSIONS (
    sessionID char(7), 

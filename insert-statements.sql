@@ -103,28 +103,32 @@ insert into CAN_SERVICE_CLIENT (ClientID, EmpID) values ('C0450', 'E30816862');
 insert into CAN_SERVICE_CLIENT (ClientID, EmpID) values ('C7729', 'E75887080');
 
 -- Insert data for INCIDENTS
-insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC665806994', '10-MAR-2020', '10-FEB-2020', 'C9887', 'Traum subdr hem w loss of consciousness of 31-59 min, init', 'OR77462531878');
-insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC816611783', '12-MAR-2020', '10-MAR-2020', 'C9887', 'Nondisp seg fx shaft of l femr, 7thJ', 'OR44549999667');
-insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC782926555', '18-MAR-2020', '17-FEB-2020', 'C6555', 'Other complications associated with artificial fertilization', 'OR21857777606');
-insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC903458374', '24-MAR-2020', '25-JAN-2020', 'C6555', 'Poisoning by oth psychotropic drugs, undetermined, subs', 'OR31892267049');
-insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC773603119', '03-MAR-2020', '04-JAN-2020', 'C6928', 'Contact with hot water in bath or tub, sequela', 'OR23376751177');
-insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC021719877', '19-MAR-2020', '15-MAR-2018', 'C6928', 'Sltr-haris Type I physeal fx phalanx of right toe, init', 'OR29070583181');
-insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC907009497', '10-MAY-2019', '09-APR-2018', 'C6928', 'Corrosion of left eye and adnexa, part unsp, subs encntr', 'OR78809410802');
-insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC987310174', '25-AUG-2019', '04-JUN-2019', 'C6928', 'Nondisplaced oblique fracture of shaft of right tibia', 'OR07368537866');
-insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC358115731', '14-JAN-2019', '27-DEC-2018', 'C6928', 'Chronic periodontitis, localized, unspecified severity', 'OR74183465803');
-insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC757589979', '01-AUG-2018', '01-AUG-2018', 'C6928', 'Unsp injury of left innominate or subclavian artery, sequela', 'OR83969622999');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC123456789', '03-JAN-2020', '29-DEC-2019', 'C9887', 'Lorem ipsum sit dolor', 'NULL');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC567875421', '14-JAN-2020', '10-JAN-2020', 'C9887', 'Lorem ipsum sit dolor', 'NULL');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC102203333', '08-FEB-2020', '01-FEB-2020', 'C9887', 'Lorem ipsum sit dolor', 'NULL');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC182828382', '03-MAR-2020', '23-FEB-2020', 'C9887', 'Lorem ipsum sit dolor', 'NULL');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC600003242', '10-MAR-2020', '01-MAR-2020', 'C9887', 'Lorem ipsum sit dolor', 'OR77462531878');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC816611783', '12-MAR-2020', '10-MAR-2020', 'C9887', 'Lorem ipsum sit dolor', 'OR44549999667');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC782926555', '18-MAR-2020', '17-FEB-2020', 'C6555', 'Lorem ipsum sit dolor', 'OR21857777606');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC903458374', '24-MAR-2020', '25-JAN-2020', 'C6555', 'Lorem ipsum sit dolor', 'OR31892267049');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC773603119', '03-MAR-2020', '04-JAN-2020', 'C6928', 'Lorem ipsum sit dolor', 'OR23376751177');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC021719877', '19-MAY-2020', '15-MAR-2018', 'C6928', 'Lorem ipsum sit dolor', 'OR29070583181');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC907009497', '10-MAY-2019', '09-APR-2018', 'C6928', 'Lorem ipsum sit dolor', 'OR78809410802');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC987310174', '25-AUG-2019', '04-JUN-2019', 'C6928', 'Lorem ipsum sit dolor', 'OR07368537866');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC358115731', '14-JAN-2019', '27-DEC-2018', 'C6928', 'Lorem ipsum sit dolor', 'OR74183465803');
+insert into INCIDENTS (IncidentID, Incident_date, Complaint_date, ClientID, Description, OrderID) values ('INC757589979', '01-AUG-2018', '01-AUG-2018', 'C6928', 'Lorem ipsum sit dolor', 'OR83969622999');
 
 -- Insert data for ORDERS
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR77462531878', '10-FEB-2020', '19:55', 'shipped', 'War op involving intentl restrict of air/airwy, milt, subs', 'CS7172');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR44549999667', '12-FEB-2020', '7:24', 'pending', 'Intentional self-harm by other specified means, sequela', 'CS7172');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR21857777606', '18-FEB-2020', '6:32', 'delivered', 'Partial traumatic amputation of right midfoot', 'CS0783');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR31892267049', '24-FEB-2020', '17:24', 'pending', 'Pathological fracture, unspecified finger(s), sequela', 'CS0783');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR23376751177', '03-FEB-2020', '20:00', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR29070583181', '19-FEB-2020', '8:50', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR78809410802', '09-MAY-2019', '17:35', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR07368537866', '24-JUL-2019', '9:30', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR74183465803', '13-JAN-2019', '8:15', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
-insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR83969622999', '01-AUG-2018', '11:45', 'pending', 'Displ oblique fx shaft of l fibula, 7thD', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR77462531878', '10-FEB-2020', '19:55', 'shipped', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'CS7172');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR44549999667', '12-FEB-2020', '7:24', 'pending', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'CS7172');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR21857777606', '18-FEB-2020', '6:32', 'delivered', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'CS0783');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR31892267049', '24-FEB-2020', '17:24', 'pending', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'CS0783');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR23376751177', '03-FEB-2020', '20:00', 'pending', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR29070583181', '19-APR-2020', '8:50', 'pending', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR78809410802', '09-MAY-2019', '17:35', 'pending', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR07368537866', '24-JUL-2019', '9:30', 'pending', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR74183465803', '13-JAN-2019', '8:15', 'pending', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'CS7777');
+insert into ORDERS (OrderID, Order_date, Order_time, Status, Description, SiteID) values ('OR83969622999', '01-AUG-2018', '11:45', 'pending', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'CS7777');
 
 -- Insert data for ORDER_DETAILS
 insert into ORDER_DETAILS (Order_details_ID, OrderID, SiteID, Ship_date, Ship_method) values ('ORD61268558055', 'OR77462531878', 'CS7172', '12-FEB-2020', 'overnight');

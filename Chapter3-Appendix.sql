@@ -243,7 +243,7 @@ CREATE TABLE INCIDENTS (
    incident_date date,
    complaint_date date,
    description varchar(2000), 
-   clientID char (5) CONSTRAINT incident_clinetID_nn NOT NULL,
+   clientID char (5) CONSTRAINT incident_clientID_nn NOT NULL,
    CONSTRAINT incidents_pk PRIMARY KEY (incidentID)
 );
 

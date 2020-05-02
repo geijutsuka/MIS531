@@ -384,13 +384,6 @@ CREATE TABLE TRAIN_AT (
    CONSTRAINT train_at_pk PRIMARY KEY (sessionID, empID)
 );
 
-CREATE TABLE VISITS (
-   visitID char(6),
-   siteID char(6) CONSTRAINT visit_siteID_nn NOT NULL,
-   teamID char(5) CONSTRAINT visit_teamID_nn NOT NULL,
-   CONSTRAINT visit_pk PRIMARY KEY (visitID)
-);
-
 CREATE TABLE VISIT_DETAILS (
    visit_details_ID char (8),
    visitID char(6) CONSTRAINT visit_details_nn NOT NULL,

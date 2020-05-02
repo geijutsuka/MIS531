@@ -12,7 +12,7 @@ drop table CUSTOMER_REP_SPECIALTIES CASCADE CONSTRAINTS;
 drop table CUSTOMER_REP_TEAMS CASCADE CONSTRAINTS;
 drop table DISTRIBUTE CASCADE CONSTRAINTS;
 drop table DISTRIBUTION_DETAILS CASCADE CONSTRAINTS ;
-drop table EMERGENCY_ORDER CASCADE CONSTRAINTS;
+drop table EMERGENCY_ORDERS CASCADE CONSTRAINTS;
 drop table EMPLOYEES CASCADE CONSTRAINTS;
 drop table MANAGERS CASCADE CONSTRAINTS ;
 drop table FUNCTIONAL_EMPLOYEES CASCADE CONSTRAINTS;
@@ -124,7 +124,7 @@ CREATE TABLE COURSES  (
    cost number(7,2),
    product_group_ID char(4) CONSTRAINT courses_product_group_nn NOT NULL,
    CONSTRAINT courses_pk PRIMARY KEY (courseID),
-   CONSTRAINT courses_cost CHECK (cost BETWEEN 0 AND 9999999.99)
+   CONSTRAINT courses_cost CHECK (cost BETWEEN 0 AND 99999.99)
 );
 
 CREATE TABLE CUSTOMER_REPS (
@@ -138,7 +138,13 @@ CREATE TABLE CUSTOMER_REPS (
    teamID char(5),
    CONSTRAINT customer_reps_pk PRIMARY KEY (empID),
    CONSTRAINT cust_rep_quarter_bonus CHECK (quarter_bonus BETWEEN 1 AND 4),
-   CONSTRAINT cust_rep_bonus_amount CHECK (bonus_amount BETWEEN 0 AND 9999999.99)
+   CONSTRAINT cust_rep_bonus_amount CHECK (bonus_amount BETWEEN 0 AND 99999.99)
+);
+
+CREATE TABLE CUSTOMER_REP_SPECIALTIES (
+   empID char(9),
+   specialty char(4),
+   CONSTRAINT cusrep_specialties_pk PRIMARY KEY (empID, specialty)
 );
 
 CREATE TABLE CUSTOMER_REP_TEAMS (
@@ -164,7 +170,7 @@ CREATE TABLE DISTRIBUTION_DETAILS (
    CONSTRAINT distribute_details_pk PRIMARY KEY (dist_details_ID)
 );
 
-CREATE TABLE EMERGENCY_ORDER (
+CREATE TABLE EMERGENCY_ORDERS (
    orderID char(13), 
    assigned_cus_repID char(9),
    CONSTRAINT emergency_order_pk PRIMARY KEY (orderID, assigned_cus_repID)
@@ -242,6 +248,7 @@ CREATE TABLE INCIDENTS (
    incident_date date,
    complaint_date date,
    description varchar(2000), 
+   orderID char(13) CONSTRAINT incident_orderID_nn NOT NULL, 
    clientID char (5) CONSTRAINT incident_clientID_nn NOT NULL,
    CONSTRAINT incidents_pk PRIMARY KEY (incidentID)
 );
@@ -330,12 +337,6 @@ CREATE TABLE REGIONS (
    CONSTRAINT regions_pk PRIMARY KEY (regionID)
 );
 
-CREATE TABLE REPORT (
-   clientID char(4),
-   empID char(9),
-   incidentID char(12),
-   CONSTRAINT report_pk PRIMARY KEY (clientID, empID, incidentID)
-);
 
 CREATE TABLE REVIEW_DETAILS (
    reviewID char(12) CONSTRAINT review_details_reviewID_nn NOT NULL,
@@ -392,10 +393,3 @@ CREATE TABLE VISIT_DETAILS (
    CONSTRAINT visitID_pk PRIMARY KEY(visitID)
 );
 
-CREATE TABLE CUSTOMER_REP_SPECIALTIES (
-   empID char(9),
-   specialty char(4),
-   FOREIGN KEY (empID) REFERENCES CUSTOMER_REPS (empID),
-   FOREIGN KEY (specialty) REFERENCES PRODUCT_GROUPS (product_group_ID),
-   CONSTRAINT cusrep_specialties_pk PRIMARY KEY (empID, specialty)
-);

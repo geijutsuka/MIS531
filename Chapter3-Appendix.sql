@@ -384,11 +384,12 @@ CREATE TABLE TRAIN_AT (
 );
 
 CREATE TABLE VISIT_DETAILS (
-   visit_details_ID char (8),
-   visitID char(6) CONSTRAINT visit_details_nn NOT NULL,
+   visitID char (8),
    visit_date date,
    feedback varchar(2000),
-   CONSTRAINT visit_details_pk PRIMARY KEY(visit_details_ID)
+   siteID char(6) CONSTRAINT visit_details_siteID_nn NOT NULL,
+   teamID char(5) CONSTRAINT visit_details_teamID_nn NOT NULL,
+   CONSTRAINT visitID_pk PRIMARY KEY(visitID)
 );
 
 CREATE TABLE CUSTOMER_REP_SPECIALTIES (

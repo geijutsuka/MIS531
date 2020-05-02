@@ -41,6 +41,7 @@ drop table TAXES CASCADE CONSTRAINTS;
 drop table TRAIN_AT CASCADE CONSTRAINTS;
 drop table VISIT_DETAILS CASCADE CONSTRAINTS;
 
+
 ALTER SESSION SET NLS_TIMESTAMP_FORMAT='HH24:MI';
 
 -- Create tables
@@ -342,7 +343,7 @@ CREATE TABLE REVIEW_DETAILS (
    reviewID char(12) CONSTRAINT review_details_reviewID_nn NOT NULL,
    clientID char(4) CONSTRAINT review_details_clientID_nn NOT NULL,
    review_date date,
-   comment varchar(2000),
+   comments varchar(2000),
    CONSTRAINT review_details_pk PRIMARY KEY (reviewID)
 );
 

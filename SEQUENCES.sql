@@ -8,6 +8,7 @@ drop sequence order_detailsid_seq;
 drop sequence orderid_seq;
 drop sequence productid_seq;
 drop sequence product_groupid_seq;
+drop sequence product_lineid_seq;
 
 drop trigger TrigAreaIDSeq;
 drop trigger TrigEmpIDSeq;
@@ -19,6 +20,8 @@ drop trigger TrigOrderDetailsIDSeq;
 drop trigger TrigOrderIDSeq;
 drop trigger TrigProductIDSeq;
 drop trigger TrigProductGroupSeq;
+drop trigger TrigProductLineSeq;
+
 
 CREATE SEQUENCE areaid_seq INCREMENT BY 1 START WITH 001 MAXVALUE 999;
 CREATE SEQUENCE empid_seq INCREMENT BY 1 START WITH 00000001 MAXVALUE 99999999;
@@ -30,6 +33,8 @@ CREATE SEQUENCE orderid_seq INCREMENT BY 1 START WITH 00000000001 MAXVALUE 99999
 CREATE SEQUENCE order_detailsid_seq INCREMENT BY 1 START WITH 00000000001 MAXVALUE 99999999999;
 CREATE SEQUENCE productid_seq INCREMENT BY 1 START WITH 00001 MAXVALUE 99999;
 CREATE SEQUENCE product_groupid_seq INCREMENT BY 1 START WITH 01 MAXVALUE 99;
+CREATE SEQUENCE product_lineid_seq INCREMENT BY 1 START WITH 10000000 MAXVALUE 99999999;
+
 
 CREATE OR REPLACE TRIGGER TrigAreaIDSeq
 BEFORE INSERT
@@ -40,7 +45,7 @@ DECLARE
     temp_areaID AREAS.areaID%type;
 
 BEGIN
-    SELECT 'A'||areaid_seq.nextval INTO temp_areaID FROM dual;
+    SELECT LPAD(to_char(areaid_seq.currval), 4, 'A000') INTO temp_areaID FROM dual;
     :new.areaID := temp_areaID;
 
 END;
@@ -54,7 +59,7 @@ FOR EACH ROW
 DECLARE
     temp_empID EMPLOYEES.empID%type;
 BEGIN
-    SELECT 'E'||empid_seq.nextval INTO temp_empID FROM dual;
+    SELECT LPAD(to_char(empid_seq.currval), 9, 'E00000000') INTO temp_empID FROM dual;
     :new.empID := temp_empID;
 END;
 /
@@ -67,7 +72,7 @@ FOR EACH ROW
 DECLARE
     temp_clientID CLIENTS.clientID%type;
 BEGIN
-    SELECT 'C'||clientid_seq.nextval INTO temp_clientID FROM dual;
+    SELECT LPAD(to_char(clientid_seq.currval), 5, 'C0000') INTO temp_clientID FROM dual;
     :new.clientID := temp_clientID;
 END;
 /
@@ -80,7 +85,7 @@ FOR EACH ROW
 DECLARE
     temp_siteID CLIENT_SITES.siteID%type;
 BEGIN
-    SELECT 'CS'||client_siteid_seq.nextval INTO temp_siteID FROM dual;
+    SELECT LPAD(to_char(client_siteid_seq.currval), 6, 'CS0000') INTO temp_siteID FROM dual;
     :new.siteID := temp_siteID;
 END;
 /
@@ -93,7 +98,7 @@ FOR EACH ROW
 DECLARE
     temp_teamID CUSTOMER_REP_TEAMS.teamID%type;
 BEGIN
-    SELECT 'TM'||teamid_seq.nextval INTO temp_teamID FROM dual;
+    SELECT LPAD(to_char(teamid_seq.currval), 5, 'TM000') INTO temp_teamID FROM dual;
     :new.teamID := temp_teamID;
 END;
 /
@@ -107,7 +112,7 @@ FOR EACH ROW
 DECLARE
     temp_incidentID INCIDENTS.incidentID%type;
 BEGIN
-    SELECT 'INC'||incidentid_seq.nextval INTO temp_incidentID FROM dual;
+    SELECT LPAD(to_char(incidentid_seq.currval), 12, 'INC000000000') INTO temp_incidentID FROM dual;
     :new.incidentID := temp_incidentID;
 END;
 /
@@ -121,7 +126,7 @@ FOR EACH ROW
 DECLARE
     temp_orderID ORDERS.orderID%type;
 BEGIN
-    SELECT 'OR'||orderid_seq.nextval INTO temp_orderID FROM dual;
+    SELECT LPAD(to_char(orderid_seq.currval), 13, 'OR00000000000') INTO temp_orderID FROM dual;
     :new.orderID := temp_orderID;
 END;
 /
@@ -135,7 +140,7 @@ FOR EACH ROW
 DECLARE
     temp_orderDetailsID ORDER_DETAILS.order_details_ID%type;
 BEGIN
-    SELECT 'ORD'||order_detailsID_seq.nextval INTO temp_orderDetailsID FROM dual;
+    SELECT LPAD(to_char(order_detailsid_seq.currval), 14, 'ORD00000000000') INTO temp_orderDetailsID FROM dual;
     :new.order_details_ID := temp_orderDetailsID;
 END;
 /
@@ -149,7 +154,7 @@ FOR EACH ROW
 DECLARE
     temp_productID PRODUCTS.productID%type;
 BEGIN
-    SELECT 'P'||productid_seq.nextval INTO temp_productID FROM dual;
+    SELECT LPAD(to_char(productid_seq.currval), 6, 'P00000') INTO temp_productID FROM dual;
     :new.productID := temp_productID;
 END;
 /
@@ -162,7 +167,20 @@ FOR EACH ROW
 DECLARE
     temp_productGroupID PRODUCT_GROUPS.product_group_ID%type;
 BEGIN
-    SELECT 'GR'||product_groupID_seq.nextval INTO temp_productGroupID FROM dual;
+    SELECT LPAD(to_char(product_groupid_seq.currval), 4, 'GR00') INTO temp_productGroupID FROM dual;
     :new.product_group_ID := temp_productGroupID;
+END;
+/
+
+CREATE OR REPLACE TRIGGER TrigProductLineSeq
+BEFORE INSERT
+ON PRODUCT_LINES
+FOR EACH ROW
+
+DECLARE
+    temp_productLineID PRODUCT_LINES.line_number%type;
+BEGIN
+    SELECT LPAD(to_char(product_lineid_seq.currval), 8, '10000000') INTO temp_productLineID FROM dual;
+    :new.line_number := temp_productLineID;
 END;
 /

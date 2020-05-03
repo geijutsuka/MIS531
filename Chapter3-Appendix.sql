@@ -60,6 +60,7 @@ CREATE TABLE AREA_ZIP (
 CREATE TABLE BRANCHES (
    branchID char(4),
    branch_name varchar(55) CONSTRAINT branches_nn NOT NULL,
+   branch_size number (4),
    branch_type varchar(20),
    street varchar(60),
    city varchar(32),

@@ -249,6 +249,8 @@ CREATE TABLE INCIDENTS (
    incidentID char(12), 
    incident_date date,
    complaint_date date,
+   resolution_date date,
+   resolution_time timestamp,
    description varchar(2000), 
    orderID char(13) CONSTRAINT incident_orderID_nn NOT NULL, 
    clientID char (5) CONSTRAINT incident_clientID_nn NOT NULL,

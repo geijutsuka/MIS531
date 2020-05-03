@@ -1,4 +1,3 @@
-
 drop sequence areaid_seq;
 drop sequence empid_seq;
 drop sequence clientid_seq;
@@ -19,7 +18,7 @@ drop trigger TrigIncidentIDSeq;
 drop trigger TrigOrderDetailsIDSeq;
 drop trigger TrigOrderIDSeq;
 drop trigger TrigProductIDSeq;
-drop trigger TrigProductGroupIDSeq;
+drop trigger TrigProductGroupSeq;
 
 CREATE SEQUENCE areaid_seq INCREMENT BY 1 START WITH 001 MAXVALUE 999;
 CREATE SEQUENCE empid_seq INCREMENT BY 1 START WITH 00000001 MAXVALUE 99999999;
@@ -42,7 +41,7 @@ DECLARE
 
 BEGIN
     SELECT 'A'||areaid_seq.nextval INTO temp_areaID FROM dual;
-    :new.areaID := temp_areadID;
+    :new.areaID := temp_areaID;
 
 END;
 /
@@ -134,7 +133,7 @@ ON ORDER_DETAILS
 FOR EACH ROW
 
 DECLARE
-    temp_orderDetailsID ORDERS.order_details_ID%type;
+    temp_orderDetailsID ORDER_DETAILS.order_details_ID%type;
 BEGIN
     SELECT 'ORD'||order_detailsID_seq.nextval INTO temp_orderDetailsID FROM dual;
     :new.order_details_ID := temp_orderDetailsID;
@@ -148,22 +147,22 @@ ON PRODUCTS
 FOR EACH ROW
 
 DECLARE
-    temp_productID ORDERS.productID%type;
+    temp_productID PRODUCTS.productID%type;
 BEGIN
-    SELECT 'P'||productID_seq.nextval INTO temp_productID FROM dual;
-    :new.productID := productID;
+    SELECT 'P'||productid_seq.nextval INTO temp_productID FROM dual;
+    :new.productID := temp_productID;
 END;
 /
 
-CREATE OR REPLACE TRIGGER TrigProductGroupIDSeq
+CREATE OR REPLACE TRIGGER TrigProductGroupSeq
 BEFORE INSERT
-ON PRODUCT_GROUP_ID
+ON PRODUCT_GROUPS
 FOR EACH ROW
 
 DECLARE
-    temp_productGroupID ORDERS.product_group_ID%type;
+    temp_productGroupID PRODUCT_GROUPS.product_group_ID%type;
 BEGIN
     SELECT 'GR'||product_groupID_seq.nextval INTO temp_productGroupID FROM dual;
-    :new.product_group_ID := product_group_ID;
+    :new.product_group_ID := temp_productGroupID;
 END;
 /
